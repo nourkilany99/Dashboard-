@@ -3,6 +3,8 @@ import Nav from '../components/Nav';
 import Aside from '../components/Aside';
 import './Home.css';
 import Graph_insighs from '../Assets/insight1_graph.svg'
+import Statecard from '../Common/State_card';
+import Title from '../Common/Title';
 
 const Home = () => {
     return (<>
@@ -58,9 +60,18 @@ const Home = () => {
 
             </div>
 
-            {/* <div className='div2-home'>
+            <section className='state_cards'>
 
-            </div> */}
+                <Title title="State_cards" />
+
+                <div className='Collection_state'>
+                    <Statecard title='Complete Projects' number="743,980 " note='30% increase over the past two months ' />
+                    <Statecard title='Total Blog Posts' number="34 " note='5 added in the last 2 days ' />
+                    <Statecard title='Site Visits (Last 7 Days)' number="5385 " note='10% increase over the last two weeks' />
+                </div>
+
+            </section>
+
     
 
         </div>

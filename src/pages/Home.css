@@ -85,7 +85,6 @@ body{
 .graph1_insight{
     width: 55%;
     position: absolute;
-    /* z-index: 9999; */
     right: 0;
     bottom: 0;
     margin-bottom: -2%;
@@ -148,7 +147,7 @@ body{
     font-family: haas;
     font-weight: bold;
     font-size: 20px;
-    color: var(--txt_color);
+    color: white;
 }
 
 .calender_date_highlight{
@@ -163,4 +162,22 @@ body{
     font-weight: bold;
     font-size: 20px;
     color: var(--txt_color);
+
+}
+
+.state_cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.Collection_state{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
