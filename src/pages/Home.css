@@ -13,6 +13,7 @@
     --font2:40px;
     --font3:48px;
     --grey:#474747;
+    --blue:#A5BECC;
 }
 
 body{
@@ -39,8 +40,8 @@ body{
 }
 
 .content_home_all{
-    width: 93%;
-    margin-left: 7%;
+    width: 92%;
+    margin-left: 8%;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -55,8 +56,58 @@ body{
 }
 
 .insights_div{
-    width: 21%;
+    width: 30%;
     padding: 2% 2%;
     background-color: var(--grey);
-    border-radius: 25px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    height: 6vh;
+}
+
+.insights_div1{
+    color: var(--blue);
+    font-family: haas_light;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    height: 100%;
+    gap: 10px;
+}
+
+.graph1_insight{
+    width: 55%;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -2%;
+}
+
+.explore_btn{
+    background-color: var(--blue);
+    color: var(--txt_color);
+    padding: 10% 40%;
+    border: none;
+    border-radius: 20px;
+}
+
+.insight_p{
+    margin-left: 6%;
+}
+
+.calender_div{
+    width: 61%;
+    padding:  2%;
+    background-color: var(--grey);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    height: 6vh;
 }

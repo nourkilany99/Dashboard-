@@ -17,14 +17,23 @@ const Home = () => {
 
             <div className='div1-home'>
                 <div className='insights_div'>
-                    <div className='insights_div'>
-                    <p>Insight</p>
-                    <button>Explore</button>
+                    <div className='insights_div1'>
+                    <p className='insight_p'>Insights</p>
+                    <button className='explore_btn'>Explore</button>
                     </div>
 
-                    <img src={Graph_insighs} alt='Graph_insighs' />
+                    <img src={Graph_insighs} alt='Graph_insighs' className='graph1_insight' />
                 </div>
+
+                <div className='calender_div'>
+
+                </div>
+
             </div>
+
+            {/* <div className='div2-home'>
+
+            </div> */}
     
 
         </div>
