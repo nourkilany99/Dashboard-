@@ -13,6 +13,8 @@ import message from '../Assets/message_action_icon.svg'
 import Dropdown from '../Common/dropDown_btn'
 import ExploreBtn from '../Common/ExploreBtn';
 import chart1 from '../Assets/chart1.svg';
+import chart2 from '../Assets/chart2.svg';
+import OptionsMenu from "../Common/OptionsMenu";
 
 const Home = () => {
     return (<>
@@ -105,6 +107,21 @@ const Home = () => {
                         <img src={chart1} alt='chart1' className='chart_img' />
                     </div>
                 </div>
+
+
+                <div className='chart2'>
+                    <div className='chart2_d1'>
+                        <p>Performance chart</p>
+
+                        <div className='chart2_d1_d'>
+                        <OptionsMenu options={[ { label: "Refresh", onClick: () => console.log("refresh clicked") },{ label: "Export Data", onClick: () => console.log("export clicked") },{ label: "View Details", onClick: () => console.log("view clicked") },]} />
+                        </div>
+                    </div>
+                    <div className='chart_img_d'>
+                        <img src={chart2} alt='chart2' className='chart2_img' />
+                    </div>
+                </div>
+
 
             </div>
 

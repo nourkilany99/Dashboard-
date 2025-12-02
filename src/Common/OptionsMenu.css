@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+.options-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Three dots button */
+.dots-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.dots-btn:hover {
+  opacity: 0.7;
+}
+
+/* Dropdown */
+.options-dropdown {
+  position: absolute;
+  right: 0;
+  top: 28px;
+  min-width: 140px;
+  padding: 10px;
+  border-radius: 12px;
+
+  /* Glass style */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.option-item {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.option-item:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
