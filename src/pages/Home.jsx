@@ -26,6 +26,33 @@ const Home = () => {
                 </div>
 
                 <div className='calender_div'>
+                    <div className='calender_div1'>
+                    <p className='calender_p'>Calender</p>
+                    <p className='date_p'>20 September 2025</p>
+                    </div>
+
+                    <div className='calender_all'>
+                        <div className='calender_date1'>
+                        <p>18</p>
+                        </div>
+
+                        <div className='calender_date2'>
+                        <p>19</p>
+                        </div>
+
+                        <div className='calender_date_highlight'>
+                        <p>20</p>
+                        </div>
+
+                        <div className='calender_date3'>
+                        <p>21</p>
+                        </div>
+
+                        <div className='calender_date4'>
+                        <p>22</p>
+                        </div>
+
+                    </div>
 
                 </div>
 

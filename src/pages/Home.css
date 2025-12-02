@@ -14,6 +14,8 @@
     --font3:48px;
     --grey:#474747;
     --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
 }
 
 body{
@@ -67,7 +69,8 @@ body{
     height: 6vh;
 }
 
-.insights_div1{
+.insights_div1,
+.calender_div1{
     color: var(--blue);
     font-family: haas_light;
     font-size: 18px;
@@ -82,7 +85,7 @@ body{
 .graph1_insight{
     width: 55%;
     position: absolute;
-    z-index: 9999;
+    /* z-index: 9999; */
     right: 0;
     bottom: 0;
     margin-bottom: -2%;
@@ -106,8 +109,58 @@ body{
     background-color: var(--grey);
     border-radius: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    justify-content: space-around;
+    align-items: center;
     position: relative;
     height: 6vh;
+}
+
+.calender_p{
+    font-family: haas_light;
+    color: var(--blue);
+    font-size: 18px;
+}
+
+.date_p{
+    font-family: haas_light;
+    color: white;
+    font-size: 18px;
+}
+
+.calender_all{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calender_date1,
+.calender_date2,
+.calender_date3,
+.calender_date4{
+    background-color: var(--beige_light);
+    width: 15%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: haas;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--txt_color);
+}
+
+.calender_date_highlight{
+    background-color: var(--beige);
+    width: 18%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: haas;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--txt_color);
 }
