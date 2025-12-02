@@ -24,7 +24,7 @@ const Aside = () => {
 
         <button className='project_icon_btn'>
         <img src={Project_manager_icon} alt='Project_manager_icon' />
-        <span className="tooltip">Home</span>
+        <span className="tooltip">Projects</span>
         </button>
 
         <button className='gallery_icon_btn'>

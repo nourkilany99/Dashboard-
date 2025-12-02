@@ -23,10 +23,8 @@ aside{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* margin-left: 10%; */
-     position: fixed; 
-    /* z-index: 900;
-    margin-top: 10%;  */
+    position: fixed;
+    z-index: 3000;
 }
 
 .d1_aside{
@@ -94,6 +92,7 @@ aside{
     transform: translateY(-50%);
     top: 50%;
     transition: 0.25s ease;
+    z-index: 10000;
 }
 
 
@@ -106,5 +105,6 @@ aside{
 .blog_icon_btn:hover .tooltip,
 .logout_icon_btn:hover .tooltip {
     opacity: 1;
-    left: 70px; /* small slide animation */
+    left: 70px;
+    z-index: 9999; 
 }
