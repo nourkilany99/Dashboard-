@@ -33,49 +33,20 @@ body{
     src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
 }
 
-@font-face {
-    font-family: haas_bold;
-    src: url(../font/haas_font/NeueHaasGrotDispRound-75Bold-Trial.otf);
-}
-
-.card_state_all{
-    width: 28.5%;
-    height: 15vh;
+.btn_quickAction{
+    width: 24%;
     background-color: var(--grey);
-    border-radius: 25px;
-    padding: 2%;
     display: flex;
-    align-items: start;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.explore_arrow{
-    width: 10%;
-}
-
-.card_title_div{
-    width: 100%;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-}
-
-.title_card{
-    color: var(--blue);
     font-size: 18px;
     font-family: haas_light;
+    border: none;
+    border-radius: 25px;
+    padding: 1% ;
+    color: rgba(255, 255, 255, 0.481);
+    gap: 5%;
 }
-
-.number_card{
-    color: white;
-    font-family: haas_bold;
-    font-size: 42px;
-}
-
-.note_card{
-    color: rgba(255, 255, 255, 0.454);
-    font-family: haas_light;
-    font-size: 16px;
-
+.icons_quick{
+    width: 13%;
 }

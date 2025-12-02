@@ -5,6 +5,11 @@ import './Home.css';
 import Graph_insighs from '../Assets/insight1_graph.svg'
 import Statecard from '../Common/State_card';
 import Title from '../Common/Title';
+import QuickActionBtn from '../Common/QuickAction_btn';
+import add from '../Assets/add_icon.svg';
+import blog from '../Assets/post_icon.svg';
+import upload from '../Assets/upload_icon.svg';
+import message from '../Assets/message_action_icon.svg'
 
 const Home = () => {
     return (<>
@@ -72,9 +77,20 @@ const Home = () => {
 
             </section>
 
+            <div className='quick_actions'>
+            <Title title='Quick Actions'/>
+            <div className='all_quick_btns'>
+                <QuickActionBtn icon={add} action='Add a new project' />
+                <QuickActionBtn icon={blog} action='Write a post' />
+                <QuickActionBtn icon={upload} action='Exhibition Item for Lifting' />
+                <QuickActionBtn icon={message} action='View Messages' />
+            </div>
+            </div>
+
     
 
         </div>
+
     </div>
 
     </>);

@@ -165,7 +165,8 @@ body{
 
 }
 
-.state_cards{
+.state_cards,
+.quick_actions{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -174,10 +175,10 @@ body{
     margin-top: 2%;
 }
 
-.Collection_state{
+.Collection_state,
+.all_quick_btns{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
