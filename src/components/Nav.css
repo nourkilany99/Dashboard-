@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --bck_dark:#161617;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+nav{
+    width: 80%;
+    padding: 3% 10% 1% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #2d2d2eb4 ;
+    z-index: 1000;
+    top: 0;
+    backdrop-filter: blur(12px);   
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav_d1{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3%;
+    width: 30%;
+}
+
+.user_img{
+    width: 17%;
+}
+
+.welcome_msg{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 18px;
+}
+
+.nav_d2{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-family: haas;
+    color: #B9B9BD;
+    width: 70%;
+    gap: 0.5%;
+}
+
+.TimeDiv,
+.last_login_Div{
+    background-color: var(--bck_dark);
+    padding: 2% 4%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Time_nav,
+.Last_login_nav{
+    font-size: 18px;
+    font-family: haas;
+}
+
+.search_icon_div,
+.notification_icon_div{
+    background-color: var(--bck_dark);
+    padding: 1.5% 2%;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.icon_search,
+.notification_icon,
+.night_icon{
+    width: 100%;
+}
+
+.night_icon_div{
+    background-color: var(--sec_txt_colot);
+    padding: 1.5% 2%;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}

@@ -1,0 +1,127 @@
+@media (max-width: 768px) {
+
+    .loginS {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    /* Hide left hero image or make it smaller */
+    .loginD1 {
+       display: none;
+    }
+
+    .loginImg {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    /* Small text and button under hero */
+    .cntnt-img-login {
+        margin-top: 15px;
+    }
+
+    .cntnt-img-login p {
+        font-size: 14px;
+    }
+
+    .img_btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    /* Right side container becomes full width */
+    .loginD2 {
+        width: 90%;
+        padding: 25px 5px;
+        border-radius: 20px;
+        background-color: #1E1E1E; /* match your theme */
+    }
+
+    /* Top section with logo + text */
+    .s1_d2_cntnt {
+        text-align: center;
+        width: 90%;
+        padding:5%;
+    }
+
+    .s1_d2_cntnt img {
+        width: 70px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    /* Google login button */
+    .btn_google {
+        width: 90%;
+        padding: 2% 5%;
+        margin: 0 5%;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .google_icon {
+        width: 22px;
+    }
+
+    .div_or {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    /* Input fields full width */
+    .email_input_div,
+    .pass_input_div {
+        width: 90%;
+        padding: 0 5%;
+    }
+
+    .input_email {
+        width: 90%;
+        display: flex;
+        align-items: center;
+    }
+
+    .input_email input {
+        width: 90%;
+        padding: 0% 20px;
+        border-radius: 40px;
+        font-size: 15px;
+    }
+
+    .eye {
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .remember_div {
+        gap: 10px;
+        width: 86%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:5% 7%;
+    }
+
+    .rembr {
+        gap: 8px;
+    }
+
+    .login_btn {
+        width: 90%;
+        padding: 2% 0%;
+        margin: 5% 5%;
+        font-size: 16px;
+        border-radius: 40px;
+    }
+
+    footer {
+        width: 80%;
+        padding: 0 10%;
+        text-align: center;
+        font-size: 14px;
+    }
+}

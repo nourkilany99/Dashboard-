@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --bck_dark:#161617;
+    --grey:#474747;
+}
+
+aside{
+    width: 5%;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-left: 10%; */
+     position: fixed; 
+    /* z-index: 900;
+    margin-top: 10%;  */
+}
+
+.d1_aside{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--bck_dark);
+    padding:15% 5% 80% 5%;
+    gap: 5px;
+    border-radius: 40px;
+}
+
+.home_icon_btn{
+    width: 90%;
+    padding: 0 5%;
+    background-color: var(--sec_txt_colot);
+    border: none;
+    height: 7vh;
+    border-radius: 50vh;
+    font-family: haas;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.project_icon_btn,
+.gallery_icon_btn,
+.skills_icon_btn,
+.category_icon_btn,
+.message_icon_btn,
+.blog_icon_btn,
+.logout_icon_btn{
+    width: 90%;
+    padding: 0 5%;
+    background-color: var(--grey);
+    border: none;
+    height: 7vh;
+    border-radius: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: haas;
+    position: relative;
+}
+
+
+.tooltip {
+    position: absolute;
+    left: 60px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);          
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    top: 50%;
+    transition: 0.25s ease;
+}
+
+
+.home_icon_btn:hover .tooltip,
+.project_icon_btn:hover .tooltip,
+.gallery_icon_btn:hover .tooltip,
+.skills_icon_btn:hover .tooltip,
+.category_icon_btn:hover .tooltip,
+.message_icon_btn:hover .tooltip,
+.blog_icon_btn:hover .tooltip,
+.logout_icon_btn:hover .tooltip {
+    opacity: 1;
+    left: 70px; /* small slide animation */
+}

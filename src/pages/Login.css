@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+.loginS{
+    width: 90%;
+    padding:0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 100vh; */
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+
+.loginD1{
+    width: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    position: relative;
+}
+
+.loginImg{
+    width: 100%;
+}
+
+.cntnt-img-login{
+    width: 100%;
+    justify-content: end;
+    align-items: end;
+    margin-bottom: 3%;
+    position: absolute;
+    margin-right: -30vh;
+}
+
+.img_h{
+    font-family: haas;
+    color: var(--bck_color);
+    font-size: var(--font1);
+    padding-bottom: 3%;
+}
+
+.img_btn{
+    width: 55%;
+    border: solid 0.5px #FEF5EA;
+    color: var(--bck_color);
+    background-color: #fef5ea00;
+    padding: 2% 0%;
+    border-radius: 20px;
+    font-family: haas;
+    text-decoration: underline;
+}
+
+.loginD2{
+    width: 40%;
+    padding: 0 5%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.hr_logo{
+    border: solid 0.01px var(--bck_color);
+    width: 0.01px;
+    height: 55px;
+    background-color: #FEF5EA;
+}
+
+.s1_d2_cntnt{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    font-family: haas;
+    color: var(--bck_color);
+    font-size: 16px;
+    padding-bottom: 5%;
+}
+
+.btn_google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fef5ea00;
+    border: solid 0.5px #FEF5EA;
+    color: var(--bck_color);
+    width: 100%;
+    padding: 2% 0;
+    border-radius: 20px;
+    gap: 5px;
+    font-family: haas;
+    font-size: 16px;
+}
+
+.google_icon{
+    width: 4%;
+}
+
+.div_or{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 0;
+}
+
+.line_or{
+    width: 45%;
+    border: solid 0.01px #fef5ea41;
+    background-color: #fef5ea43;
+}
+
+.or_p{
+    font-family: haas;
+    color: var(--bck_color);
+}
+
+.input_email{
+    width: 100%;
+
+}
+
+.email_input_div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: haas_light;
+}
+
+.email_req{
+    color: white;
+    font-family: 20px;
+}
+
+.input_email{
+    width: 90%;
+    color: #fef5ea6f;
+    background-color: #fef5ea00;
+    border: solid 0.5px #fef5ea7f;
+    padding: 2% 5%;
+    border-radius: 20px;
+    font-family: haas;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pass_input_div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: haas_light;
+    margin-top: 5%;
+}
+
+.input_theemail{
+    background-color: #2d2d2e00;
+    border: solid 0px;
+    width: 90%;
+    border: none;
+}
+
+.eye{
+    width: 4%;
+}
+
+.remember_div{
+    width: 96%;
+    padding: 5% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.custom-checkbox{
+    background-color: #2d2d2e00;
+    border: solid 0.5px #fef5ea5f ;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+
+
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.rembr{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5%;
+    color: rgba(255, 255, 255, 0.682);
+    font-family: haas_light;
+}
+
+.frgt_pass_p{
+    color: rgba(255, 255, 255, 0.682);
+    font-family: haas_light;
+}
+
+.login_btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: haas;
+    color: white;
+    padding: 3% 0;
+    background-color: var(--sec_txt_colot);
+    border-radius: 30px;
+    border: none;
+    font-weight: 800;
+}
