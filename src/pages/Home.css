@@ -166,7 +166,8 @@ body{
 }
 
 .state_cards,
-.quick_actions{
+.quick_actions,
+.Charts{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -181,4 +182,43 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.chart1{
+    width: 44%;
+    padding: 2%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--grey);
+    border-radius: 25px;
+}
+
+.chart1_d1{
+    width: 96%;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: white;
+}
+
+.chart1_d1_d{
+    width: 50%;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2px;
+}
+
+.chart_img_d{
+    width: 100%;
+    padding: 2% 0;
+}
+
+.chart_img{
+    width: 100%;
 }

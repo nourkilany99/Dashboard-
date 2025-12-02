@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+.dropdown {
+    position: relative;
+    font-family: haas;
+}
+
+/* Button */
+.dropdown-btn {
+    width: 100%;
+    padding:3% 0;
+    background: var(--sec_txt_colot);
+    border: none;
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    color: var(--bck_color);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family: haas;
+}
+
+.arrow {
+    transition: transform 0.25s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}
+
+/* MENU */
+.dropdown-menu {
+    margin-top: 8px;
+    list-style: none;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+.dropdown-item {
+    padding: 10px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}

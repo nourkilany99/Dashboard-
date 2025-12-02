@@ -10,6 +10,9 @@ import add from '../Assets/add_icon.svg';
 import blog from '../Assets/post_icon.svg';
 import upload from '../Assets/upload_icon.svg';
 import message from '../Assets/message_action_icon.svg'
+import Dropdown from '../Common/dropDown_btn'
+import ExploreBtn from '../Common/ExploreBtn';
+import chart1 from '../Assets/chart1.svg';
 
 const Home = () => {
     return (<>
@@ -85,6 +88,24 @@ const Home = () => {
                 <QuickActionBtn icon={upload} action='Exhibition Item for Lifting' />
                 <QuickActionBtn icon={message} action='View Messages' />
             </div>
+            </div>
+
+            <div className='Charts'>
+
+                <div className='chart1'>
+                    <div className='chart1_d1'>
+                        <p>Performance chart</p>
+
+                        <div className='chart1_d1_d'>
+                        <Dropdown />
+                        <ExploreBtn />
+                        </div>
+                    </div>
+                    <div className='chart_img_d'>
+                        <img src={chart1} alt='chart1' className='chart_img' />
+                    </div>
+                </div>
+
             </div>
 
     
