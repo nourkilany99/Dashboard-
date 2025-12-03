@@ -8,6 +8,7 @@ import skills from '../Assets/skills_icon.svg';
 import message_icon from '../Assets/message_icon.svg';
 import category_icon from '../Assets/category_icon.svg';
 import logout_icon from '../Assets/Logout_icon.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,40 +18,40 @@ const Aside = () => {
     <aside>
         <div className='d1_aside'>
 
-        <button className='home_icon_btn'>
+        <Link className='link-reset' to='../pages/Skills.jsx'><button className='home_icon_btn'>
         <img src={home_icon} alt='home_icon' />
         <span className="tooltip">Home</span>
-        </button>
+        </button></Link>
 
-        <button className='project_icon_btn'>
+        <Link className='link-reset' to='../pages/Skills.jsx'><button className='project_icon_btn'>
         <img src={Project_manager_icon} alt='Project_manager_icon' />
         <span className="tooltip">Projects</span>
-        </button>
+        </button></Link>
 
-        <button className='gallery_icon_btn'>
+        <Link className='link-reset' to='../pages/Skills.jsx'><button className='gallery_icon_btn'>
         <img src={gallery} alt='gallery_icon' />
         <span className="tooltip">Gallery</span>
-        </button>
+        </button></Link>
 
-        <button className='skills_icon_btn'>
+        <Link className='link-reset' to='/Skills'><button className='skills_icon_btn'>
         <img src={skills} alt='skills_icon' />
         <span className="tooltip">Skills</span>
-        </button>
+        </button></Link>
 
-        <button className='blog_icon_btn'>
+        <Link className='link-reset' to='../pages/Skills.jsx'><button className='blog_icon_btn'>
         <img src={blog_icon} alt='blog_icon' />
         <span className="tooltip">Blog</span>
-        </button>
+        </button></Link>
 
-        <button className='message_icon_btn'>
+        <Link className='link-reset' to='../pages/Skills.jsx'><button className='message_icon_btn'>
         <img src={message_icon} alt='message_icon' />
         <span className="tooltip">Message</span>
-        </button>
+        </button></Link>
 
-        <button className='category_icon_btn'>
+        <Link className='link-reset' to='../pages/Skills.jsx'><button className='category_icon_btn'>
         <img src={category_icon} alt='category_icon' />
         <span className="tooltip">Category</span>
-        </button>
+        </button></Link>
 
         </div>
 

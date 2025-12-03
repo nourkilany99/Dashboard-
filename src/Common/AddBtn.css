@@ -33,37 +33,24 @@ body{
     src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
 }
 
-@font-face {
-    font-family: haas_thin;
-    src: url(../font/haas_font/NeueHaasGrotDispRound-25XThin-Trial.otf);
-}
-
-@font-face {
-    font-family: haas_bold;
-    src: url(../font/haas_font/NeueHaasGrotDispRound-75Bold-Trial.otf);
-}
-
-.h1_state{
-    font-size: 22px;
-    padding-top: 2%;
-}
-
-.p_state{
-    font-size: 16px;
-    padding-bottom: 2%;
-    font-family: haas_light;
-    color: #a5beccac;
-}
-
-.extra_title_div{
-    width: 80%;
-    padding: 0 20% 0 0;
+.btn_add_common{
+    padding: 1% 0%;
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    gap: 5px;
-    margin-left: 1%;
-    color: var(--blue);
+    gap: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--sec_txt_colot);
     font-family: haas;
+    width: 15%;
+
+}
+
+.btn_add_p{
+    color: var(--bck_color);
+}
+
+.btn_add_img{
+    width: 10%;
 }
