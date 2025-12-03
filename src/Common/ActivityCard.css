@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_bold;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-75Bold-Trial.otf);
+}
+
+.activityCard_all{
+    width: 96%;
+    padding: 1% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+    background-color: var(--grey);
+}
+
+.activityCard_user{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    color: white;
+    font-family: haas_bold;
+}
+
+.activity_img_user{
+    width: 17%;
+}
+
+.name_activity{
+    font-family: haas;
+    font-size: 18px;
+}
+
+.the_activity{
+    font-size: 20px;
+    font-family: haas_light;
+    color: rgba(255, 255, 255, 0.834);
+}
+
+.extra_activ_div{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.date_activity{
+    font-size:16px;
+    font-family: haas_light;
+    color: rgba(255, 255, 255, 0.834);
+}

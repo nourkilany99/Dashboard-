@@ -15,6 +15,10 @@ import ExploreBtn from '../Common/ExploreBtn';
 import chart1 from '../Assets/chart1.svg';
 import chart2 from '../Assets/chart2.svg';
 import OptionsMenu from "../Common/OptionsMenu";
+import ActivityCard from '../Common/ActivityCard';
+import activeimg1 from '../Assets/activityImg1.svg';
+import activeimg2 from '../Assets/activityImg2.svg';
+import activeimg3 from '../Assets/activityImg3.svg';
 
 const Home = () => {
     return (<>
@@ -122,6 +126,25 @@ const Home = () => {
                     </div>
                 </div>
 
+
+            </div>
+
+            <div className='Activity'>
+
+                <div className='activity_hero_d'>
+                <Title title='Activity Nutrition' />
+                <div className='activity_d1_btns'>
+                        <Dropdown label="Last 24 downloads" width="200px" />
+                        <ExploreBtn width="42px" />
+                </div>
+                
+                </div>
+
+                <div className='activity_card_main_cntnt'>
+                    <ActivityCard activimg={activeimg1} activ_name='Jana Yasser' theActivity='Added a new UI/UX project' activityDate='October 24, 2025 ' />
+                    <ActivityCard activimg={activeimg2} activ_name='Ali Ahmed' theActivity='Added a new UI/UX project' activityDate='October 24, 2025 ' />
+                    <ActivityCard activimg={activeimg3} activ_name='Nour Ziad' theActivity='Added a new UI/UX project' activityDate='October 24, 2025 ' />
+                </div>
 
             </div>
 

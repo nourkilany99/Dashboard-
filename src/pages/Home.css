@@ -166,7 +166,8 @@ body{
 }
 
 .state_cards,
-.quick_actions{
+.quick_actions,
+.Activity{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -240,4 +241,29 @@ body{
 
 .chart2_img{
     width: 70%;
+}
+
+.activity_hero_d{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.activity_d1_btns{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2px;
+}
+
+.activity_card_main_cntnt{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
 }

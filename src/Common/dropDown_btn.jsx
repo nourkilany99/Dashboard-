@@ -3,7 +3,7 @@ import './dropDown_btn.css';
 import drop_img from '../Assets/down.svg'
 
 export default function Dropdown({
-  label = "Select",
+  label = "Monthly",
   items = [],
   width = "150px",
   onSelect = () => {}
