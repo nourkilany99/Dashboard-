@@ -6,7 +6,13 @@ import Title from '../Common/Title';
 import AddBtn from '../Common/AddBtn';
 import Line from '../Common/Line';
 import SkillsInput from '../Common/SkillsInput';
-import figma from '../Assets/fihma.svg'
+import figma from '../Assets/fihma.svg';
+import ps from '../Assets/ps.svg';
+import Ai from '../Assets/AI.svg';
+import vsc from '../Assets/VSC.svg';
+import pr from '../Assets/PR.svg';
+import problem_icon from '../Assets/Problem_icon.svg';
+import blender from '../Assets/blender.svg';
 
 
 const Skills = () => {
@@ -46,7 +52,21 @@ const Skills = () => {
 
             <Line />
 
-            <SkillsInput Skills_img={figma} Name='Figma' type='Tool' level='Expert' category='UI/UX' Status='' />
+            <SkillsInput Skills_img={figma} Name='Figma' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+            <Line />
+            <SkillsInput Skills_img={ps} Name='Photoshop' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+            <Line />
+            <SkillsInput Skills_img={Ai} Name='Illustration' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+            <Line />
+            <SkillsInput Skills_img={vsc} Name='Visual studio code' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+            <Line />
+            <SkillsInput Skills_img={pr} Name='premiere' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+            <Line />
+            <SkillsInput Skills_img={problem_icon} Name='Problem solving' type='Soft skill' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+            <Line />
+            <SkillsInput Skills_img={blender} Name='Blender' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+            <Line />
+            
 
 
         </div>

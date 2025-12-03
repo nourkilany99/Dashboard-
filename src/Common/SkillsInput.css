@@ -33,34 +33,64 @@ body{
     src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
 }
 
-.all_skills_input{
+.skills_row {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 
+        1.1fr   /* Skill name */
+        1fr     /* Type */
+        1fr     /* Level */
+        1fr     /* Category */
+        1.4fr   /* Status */
+        1fr     /* Last update */
+        0.4fr;  /* Actions */
+    
     align-items: center;
-}
-
-.skill_name_d{
-    width: 15%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.type_div{
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
+    padding: 14px 18px;
+    border-bottom: 1px solid #2f2f2f;
+    color: white;
     font-family: haas_light;
-    font-size: 16px;
+    font-size: 15px;
 }
 
-.level_div{
-    width: 10%;
+.col p {
+    margin: 0;
+}
+
+/* ===== Skill name column ===== */
+.skill_name_col {
     display: flex;
     align-items: center;
-    justify-content: start;
-    font-family: haas_light;
-    font-size: 16px;
+    gap: 10px;
+}
+
+.skill_name_col img {
+    width: 28px;
+    height: auto;
+}
+
+/* ===== Status column ===== */
+.status_col {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status_text {
+    opacity: 0.8;
+}
+
+/* ===== Center all other columns ===== */
+.type_col,
+.level_col,
+.category_col,
+.update_col,
+.action_col {
+    display: flex;
+    align-items: center;
+}
+
+/* Action column (dots) */
+.action_col {
+    justify-content: center;
 }
