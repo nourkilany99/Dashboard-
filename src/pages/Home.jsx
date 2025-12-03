@@ -19,6 +19,8 @@ import ActivityCard from '../Common/ActivityCard';
 import activeimg1 from '../Assets/activityImg1.svg';
 import activeimg2 from '../Assets/activityImg2.svg';
 import activeimg3 from '../Assets/activityImg3.svg';
+import InsightsPies from '../Common/InsightsPies';
+import pieChart from '../Assets/PieChart2.svg'
 
 const Home = () => {
     return (<>
@@ -146,6 +148,12 @@ const Home = () => {
                     <ActivityCard activimg={activeimg3} activ_name='Nour Ziad' theActivity='Added a new UI/UX project' activityDate='October 24, 2025 ' />
                 </div>
 
+            </div>
+
+            <div className='PieChartAll'>
+                <InsightsPies Title='Most Visited Page' pieChart={pieChart} />
+                <InsightsPies Title='Average time per visit' pieChart={pieChart} />
+                <InsightsPies Title='Bounce Rate' pieChart={pieChart} />
             </div>
 
     

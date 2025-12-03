@@ -7,13 +7,13 @@ const InsightsPies = (props) => {
     
     <div className='InsightsPies_card'>
 
-        <div>
+        <div className='InsightsPies_d1'>
             <p>{props.Title}</p>
-            <ExploreBtn width = "24px" />
+            <ExploreBtn width = "46px" />
         </div>
 
-        <div>
-            <img src={props.pieChart1} alt='PieChart1' />
+        <div className='piechrts_img_div'>
+            <img src={props.pieChart} alt='PieChart1' className='PieChart_img' />
         </div>
 
     </div>
