@@ -1,7 +1,6 @@
 import React from 'react';
 import './InsightsPies.css';
 import ExploreBtn from './ExploreBtn';
-import './InsightsPiesMob.css';
 
 const InsightsPies = (props) => {
     return (<>
