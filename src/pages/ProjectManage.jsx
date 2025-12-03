@@ -7,6 +7,9 @@ import AddBtn from '../Common/AddBtn';
 import ProjectsSide from '../Common/ProjectsSide';
 import ProjectPoster from '../Common/ProjectPoster';
 import project1 from '../Assets/project1.svg';
+import project2 from '../Assets/project2.svg';
+import project3 from '../Assets/project3.svg';
+import Footer2 from '../components/Footer2'
 
 const ProjectManage = () => {
     return (<>
@@ -37,13 +40,19 @@ const ProjectManage = () => {
 
         <div className='poster_all_work_div'>
             <ProjectPoster ProjectPoster={project1} />
+            <ProjectPoster ProjectPoster={project2} />
+            <ProjectPoster ProjectPoster={project3} />
+            
         </div>
-
 
         
         </div>
 
+        <Footer2 />
+
      </div>
+
+
 
 
 
