@@ -13,7 +13,8 @@ import vsc from '../Assets/VSC.svg';
 import pr from '../Assets/PR.svg';
 import problem_icon from '../Assets/Problem_icon.svg';
 import blender from '../Assets/blender.svg';
-import Footer2 from '../components/Footer2'
+import Footer2 from '../components/Footer2';
+import './SkillsMob.css'
 
 
 const Skills = () => {

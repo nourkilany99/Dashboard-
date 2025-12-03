@@ -94,3 +94,14 @@ body{
 .action_col {
     justify-content: center;
 }
+
+
+
+@media (max-width: 768px) {
+
+    .skills_row {
+   padding: 5px 0px;
+}
+
+
+}
