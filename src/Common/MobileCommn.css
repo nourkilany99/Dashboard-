@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+
+    .h1_state{
+    font-size: 20px;
+    margin-left: 4%;
+    margin-bottom: 2%;
+    }
+
+    .card_state_all{
+    width: 90%;
+    height: 18vh;
+    padding: 3% 5%;
+    }
+
+    .explore_arrow{
+    width: 15%;
+    }
+
+
+    .title_card{
+    color: var(--blue);
+    font-size: 18px;
+    font-family: haas_light;
+    }
+
+    .number_card{
+    margin-top: -3%;
+    }
+
+    
+
+
+
+
+}

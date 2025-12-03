@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../components/Nav';
 import Aside from '../components/Aside';
 import './Home.css';
+import './mobile.css'
 import Graph_insighs from '../Assets/insight1_graph.svg'
 import Statecard from '../Common/State_card';
 import Title from '../Common/Title';

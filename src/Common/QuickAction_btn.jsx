@@ -1,6 +1,9 @@
 import React from 'react';
 import './QuickAction_btn.css';
 
+import './QuickActionMob.css';
+
+
 const QuickAction_btn = (props) => {
     return (<>
 

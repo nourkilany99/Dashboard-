@@ -1,5 +1,6 @@
 import React from 'react';
-import './ActivityCard.css'
+import './ActivityCard.css';
+import './ActivityMob.css';
 
 const ActivityCard = (props) => {
     return (<> 

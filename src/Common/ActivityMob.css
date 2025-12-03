@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+
+.activity_img_user{
+    width: 30%;
+}
+
+.name_activity{
+    font-size: 14px;
+}
+
+.the_activity{
+    font-size: 15px;
+    font-family: haas_light;
+    color: rgba(255, 255, 255, 0.834);
+}
+
+.extra_activ_div{
+    width: 50%;
+}
+
+.date_activity{
+    font-size:12px;
+    color: rgba(255, 255, 255, 0.566);
+}
+
+}

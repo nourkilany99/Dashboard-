@@ -4,6 +4,7 @@ import User_img from '../Assets/navMe.svg';
 import search_icon from '../Assets/search_icon.svg';
 import notification_icon from '../Assets/Notification_icon.svg';
 import night_icon from '../Assets/moon_icon.svg';
+import './MobileComp.css'
 
 
 

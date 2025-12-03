@@ -1,6 +1,7 @@
 import React from 'react';
 import './State_card.css';
 import explore_arrow from '../Assets/explore_arrow.svg';
+import './MobileCommn.css'
 
 
 const State_card = (props) => {

@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+
+.btn_quickAction{
+    width: 100%;   
+    font-size: 18px;
+    padding: 2%  0%;
+    gap: 1%;
+    margin: 1% 0;
+    }
+
+    .icons_quick{
+    width: 8%;
+    }
+}

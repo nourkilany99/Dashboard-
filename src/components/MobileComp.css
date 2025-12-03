@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+
+nav{
+    width: 90%;
+    padding: 3% 5% 3% 5%;
+}
+
+.nav_d1{
+    flex-direction: column;
+    align-items: start;
+    width: 30%;
+}
+
+.user_img{
+    width: 30%;
+    margin-bottom: 2%;
+}
+
+.welcome_msg{
+    line-height: 130%;
+    font-size: 14px;
+}
+
+.nav_d2{
+    width: 70%;
+}
+
+.TimeDiv,
+.last_login_Div{
+    padding: 2% 5%;
+    text-align: center;
+}
+
+.Time_nav,
+.Last_login_nav{
+    font-size: 12px;
+    width: 100%;
+}
+
+}
