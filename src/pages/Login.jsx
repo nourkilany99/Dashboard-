@@ -6,6 +6,7 @@ import login_img from '../Assets/loginImg.svg';
 import google from '../Assets/google_logo.svg';
 import eye from '../Assets/eye_icon.svg';
 import Footer from '../components/Footer'
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -66,7 +67,7 @@ const Login = () => {
                
             </div>
 
-            <button className='login_btn'>Login</button>
+            <Link className='link-reset' to='/'><button className='login_btn'>Login</button></Link>
 
         </div> 
     </section>

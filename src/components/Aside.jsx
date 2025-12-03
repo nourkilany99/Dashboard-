@@ -19,7 +19,7 @@ const Aside = () => {
     <aside>
         <div className='d1_aside'>
 
-        <Link className='link-reset' to='/Skills'><button className='home_icon_btn'>
+        <Link className='link-reset' to='/'><button className='home_icon_btn'>
         <img src={home_icon} alt='home_icon' />
         <span className="tooltip">Home</span>
         </button></Link>
@@ -57,10 +57,10 @@ const Aside = () => {
         </div>
 
 
-        <button className='logout_icon_btn'>
+        <Link className='link-reset' to='/Login'><button className='logout_icon_btn'>
         <img src={logout_icon} alt='logout_icon' />
         <span className="tooltip">Logout</span>
-        </button>
+        </button></Link>
     </aside>
     </> );
 }
