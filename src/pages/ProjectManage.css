@@ -60,6 +60,12 @@ body{
     border-radius: 25px;
     height: 50vh;
     font-family: haas;
+    transition: 0.3s;
+}
+
+.projects_by_category.active {
+  background-color: var(--txt_color);  /* your desired color */
+  color: white;
 }
 
 .extra_prjctsDiv{

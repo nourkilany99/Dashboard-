@@ -1,15 +1,13 @@
 import React from 'react';
 import './ProjectsSide.css';
 
-const ProjectsSide = (props) => {
-    return (<>
+const ProjectsSide = ({ projectName, onClick }) => {
+    return (
+        <div className='projects_side_item' onClick={onClick}>
+            <p>{projectName}</p>
+        </div>
+    );
+};
 
-    <button className='btn_projects_cat'>
-        <p>{props.projectName}</p>
-    </button>
-    
-
-    </>);
-}
  
 export default ProjectsSide;

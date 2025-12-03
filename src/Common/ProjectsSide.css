@@ -33,10 +33,10 @@ body{
     src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
 }
 
-.btn_projects_cat{
+.projects_side_item{
     border: none;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 2% ;
+    /* background-color: var(--txt_color); */
+    padding: 3% 4% ;
     font-size: 18px;
     color: white;
     font-family: haas;
