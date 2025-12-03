@@ -20,7 +20,8 @@ import activeimg1 from '../Assets/activityImg1.svg';
 import activeimg2 from '../Assets/activityImg2.svg';
 import activeimg3 from '../Assets/activityImg3.svg';
 import InsightsPies from '../Common/InsightsPies';
-import pieChart from '../Assets/PieChart2.svg'
+import pieChart from '../Assets/PieChart2.svg';
+import Footer2 from '../components/Footer2'
 
 const Home = () => {
     return (<>
@@ -155,6 +156,8 @@ const Home = () => {
                 <InsightsPies Title='Average time per visit' pieChart={pieChart} />
                 <InsightsPies Title='Bounce Rate' pieChart={pieChart} />
             </div>
+
+            <Footer2 />
 
     
 
