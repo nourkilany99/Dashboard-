@@ -1,6 +1,5 @@
 import React from 'react';
 import './Login.css';
-import './mobile.css'; 
 import logo_white from '../Assets/logo_white.svg';
 import login_img from '../Assets/loginImg.svg';
 import google from '../Assets/google_logo.svg';
