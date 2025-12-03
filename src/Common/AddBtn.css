@@ -54,3 +54,18 @@ body{
 .btn_add_img{
     width: 10%;
 }
+
+
+
+@media (max-width: 768px){
+    .btn_add_common{
+    padding: 1% 5%;
+    width: 45%;
+    }
+
+
+    .btn_add_img{
+    width: 20%;
+   }
+
+}

@@ -9,7 +9,9 @@ import ProjectPoster from '../Common/ProjectPoster';
 import project1 from '../Assets/project1.svg';
 import project2 from '../Assets/project2.svg';
 import project3 from '../Assets/project3.svg';
-import Footer2 from '../components/Footer2'
+import Footer2 from '../components/Footer2';
+import './mobileproject.css'
+
 
 const ProjectManage = () => {
 

@@ -67,3 +67,13 @@ body{
     background: rgba(255, 255, 255, 0.16);
     border-color: rgba(255, 255, 255, 0.25);
 }
+
+
+@media (max-width: 768px) {
+    .DeleteBtn {
+    width: 35%;
+    height: 5vh;}
+
+
+
+}

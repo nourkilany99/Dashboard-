@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+
+    .dashboard_projects_all{
+    width: 90%;
+    padding:25% 5% 2% 5%;
+}
+
+.project_hero_d{
+    width: 90%;
+    padding: 0 5%;
+}
+
+.projects_by_category{
+    width: 96%;
+    gap: 2px;
+    height: 30vh;
+}
+
+.projects_by_category.active {
+  background-color: var(--txt_color);  /* your desired color */
+  color: white;
+}
+
+.extra_prjctsDiv{
+    width: 90%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: inherit;
+}
+
+.poster_all_work_div{
+    width: 100%;
+}
+}

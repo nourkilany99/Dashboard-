@@ -41,3 +41,9 @@ body{
     color: white;
     font-family: haas;
 }
+
+@media (max-width: 768px) {
+    .projects_side_item{
+    font-size: 14px;
+}
+}
