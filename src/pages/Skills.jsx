@@ -4,6 +4,9 @@ import Nav from '../components/Nav';
 import Aside from '../components/Aside';
 import Title from '../Common/Title';
 import AddBtn from '../Common/AddBtn';
+import Line from '../Common/Line';
+import SkillsInput from '../Common/SkillsInput';
+import figma from '../Assets/fihma.svg'
 
 
 const Skills = () => {
@@ -26,6 +29,26 @@ const Skills = () => {
             </div>
 
             <AddBtn title='Add skills' />
+        </div>
+
+        <div className='line_div'>
+            <Line />
+
+            <div className='skills_form_inputs'>
+                <h3>Skills name</h3>
+                <h3>Type</h3>
+                <h3>Level</h3>
+                <h3>Category</h3>
+                <h3>Status</h3>
+                <h3>Last update</h3>
+                <h3>Actions</h3>
+            </div>
+
+            <Line />
+
+            <SkillsInput Skills_img={figma} Name='Figma' type='Tool' level='Expert' category='UI/UX' Status='' />
+
+
         </div>
 
         </div>

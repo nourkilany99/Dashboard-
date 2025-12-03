@@ -1,0 +1,29 @@
+.toggle {
+  width: 65px;
+  height: 32px;
+  background: #3a3a3a;      /* dark grey track */
+  border-radius: 50px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle.on {
+  background: #3a3a3a; /* same track, stays dark like your screenshot */
+}
+
+.toggle-circle {
+  width: 26px;
+  height: 26px;
+  background: #63e24b;  /* the green color */
+  border-radius: 50%;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/* When ON, move circle to the right */
+.toggle.on .toggle-circle {
+  transform: translateX(33px); 
+}

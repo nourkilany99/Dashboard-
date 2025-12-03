@@ -1,0 +1,8 @@
+.hr_table{
+    width: 1005;                
+    height: 100%;            
+    background-color: #b3b3b357; 
+    border-radius: 10px;     
+    opacity: 0.2;             
+    margin: 2% 0%; 
+}

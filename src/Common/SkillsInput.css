@@ -33,56 +33,34 @@ body{
     src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
 }
 
-.dashboard_skills_all{
-    width: 80%;
-    padding:10% 10% 2% 10%;
+.all_skills_input{
+    width: 100%;
     display: flex;
-    align-items: start;
     justify-content: space-between;
+    align-items: center;
 }
 
-.content_skills_all{
-    width: 92%;
-    margin-left: 8%;
+.skill_name_d{
+    width: 15%;
     display: flex;
     justify-content: start;
     align-items: center;
-    flex-direction: column;
 }
 
-.Skills_d1{
-    width: 100%;
+.type_div{
+    width: 10%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.d1_d_skills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.d1_d_skills_h{
-    color: var(--bck_color);
-    font-size: 18px;
-}
-
-.d1_d_skills_p{
-    color: #fef5ea92;
+    justify-content: start;
+    font-family: haas_light;
     font-size: 16px;
 }
 
-.line_div{
-    width: 100%;
-}
-
-.skills_form_inputs{
-    width: 100%;
+.level_div{
+    width: 10%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-family: haas;
-    color: white;
-    font-size: 14px;
+    justify-content: start;
+    font-family: haas_light;
+    font-size: 16px;
 }
