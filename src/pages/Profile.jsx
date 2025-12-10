@@ -15,7 +15,8 @@ import Contactedit from '../Common/Contactedit';
 import locationicon from '../Assets/locationicon.svg';
 import EditUserProfile from '../Common/EditUserProfile';
 import profilepercent from '../Assets/profilepercent.svg';
-import share from '../Assets/SaveIcon.svg'
+import share from '../Assets/SaveIcon.svg';
+import Footer from '../components/Footer'
 
 const Profile = () => {
     return (<>
@@ -157,9 +158,11 @@ const Profile = () => {
 
 
 
-            </div>
+        </div>
 
     </div>
+
+    <Footer />
 
     </>);
 }
