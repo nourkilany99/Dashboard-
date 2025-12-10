@@ -12,6 +12,10 @@ import Deletebtn2 from '../Common/Deletebtn2';
 import edit from '../Assets/blog_icon.svg';
 import delety from '../Assets/deleteicon.svg'
 import Contactedit from '../Common/Contactedit';
+import locationicon from '../Assets/locationicon.svg';
+import EditUserProfile from '../Common/EditUserProfile';
+import profilepercent from '../Assets/profilepercent.svg';
+import share from '../Assets/SaveIcon.svg'
 
 const Profile = () => {
     return (<>
@@ -92,6 +96,27 @@ const Profile = () => {
 
                     </div>
 
+                    <div className='edit_profile3_info'>
+
+                        <ProfileTitles title='Location' />
+
+                        <div className='about_location_div'>
+
+                            <div className='about_location1'>
+                                <img src={locationicon} alt='locationicon' className='locationicon' />
+                                <p>Nasr city , Cairo</p>
+                            </div>
+
+                            <div className='about_location2'>
+                                <EditBtn action='Edit' icony={edit} />
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
                     
 
                 </div>
@@ -99,15 +124,40 @@ const Profile = () => {
             </div>
 
 
-
-
-
-
-
-
-
-
         </div>
+
+
+         <div className='profile_changes2'>
+
+                <div className='profile_changes2_1'>
+
+                    <EditUserProfile />
+
+                    <p className='details_img_p'>At least 800x800 px recommended . JPG or PNG is allowed</p>
+
+                    <div className='complete_div'>
+
+                        <h2 className='h_complete'>Complete your profile</h2>
+
+                        <div className='profilepercent_div'>
+                            <img src={profilepercent} alt='profilepercent' className='profilepercent' />
+                        </div>
+
+                        <div className='actions_last_profile'>
+
+                        <AddBtn width="100%" height="50px" title="Add account" />
+                        <SaveBtn width="100%" height="50px" icony={share} title="Share access" />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
 
     </div>
 

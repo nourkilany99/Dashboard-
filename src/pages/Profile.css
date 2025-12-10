@@ -42,16 +42,16 @@ body{
 }
 
 .content_profile_all{
-    width: 92%;
-    margin-left: 8%;
+    width: 70%;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
+    margin-left: 8%;
 }
 
 .profile_changes1{
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -82,12 +82,13 @@ body{
 }
 
 .edit_profile1_info,
-.edit_profile2_info{
+.edit_profile2_info,
+.edit_profile3_info{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin: 2% 0;
+    margin: 4% 0;
 }
 
 .about_profile_div{
@@ -111,13 +112,13 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    padding: 4% 2%;
+    padding:3% 2%;
     background-color: #555454;
     font-family: haas_light;
     font-size: 16px;
     color: #fef5ea61;
     border-radius: 18px;
-    margin: 3% 0;
+    margin-top: 2%;
 }
 
 .about2_profile{
@@ -129,3 +130,104 @@ body{
     gap:5px ;
 }
 
+.about_location_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.about_location1{
+    width: 80%;
+    padding: 2%;
+    background-color: #555454;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    color: #fef5ea61;
+    border-radius: 18px;
+    font-family: haas_light;
+    font-size: 16px;
+    margin: 3% 0;
+}
+
+.locationicon{
+    width: 4%;
+}
+
+.about_location2{
+    width: 18%;
+}
+
+
+
+.profile_changes2{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.profile_changes2_1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.details_img_p{
+    font-family: haas_light;
+    color: #555454;
+    text-align: center;
+    padding: 5% 0;
+    font-size: 14px;
+}
+
+.complete_div{
+    width: 90%;
+    height: 30vh;
+    padding: 3% 5%;
+    display: flex;
+    margin: 2%;
+    background-color: #555454;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border-radius: 20px;
+    color: white;
+    font-family: haas;
+    font-size: 13px;
+
+}
+
+
+.profilepercent_div{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.profilepercent{
+    width: 70%;
+}
+
+.h_complete{
+    width: 70%;
+    padding: 5% 3%;
+}
+
+.actions_last_profile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20%;
+}
