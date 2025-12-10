@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+.dashboard_profile_all{
+    width: 80%;
+    padding:10% 10% 2% 10%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.content_profile_all{
+    width: 92%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile_changes1{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.profile_title_div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions_profile_div{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.div_settings_control{
+    width: 90%;
+    height: 100%;
+    background-color: var(--grey);
+    padding: 2% 5%;
+    border-radius: 25px;
+    margin: 2% 0;
+}
+
+.edit_profile1_info,
+.edit_profile2_info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 2% 0;
+}
+
+.about_profile_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about_contact_div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.about_profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 4% 2%;
+    background-color: #555454;
+    font-family: haas_light;
+    font-size: 16px;
+    color: #fef5ea61;
+    border-radius: 18px;
+    margin: 3% 0;
+}
+
+.about2_profile{
+    width: 14%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:5px ;
+}
+

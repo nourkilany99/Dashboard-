@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_thin;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-25XThin-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_bold;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-75Bold-Trial.otf);
+}
+
+.h2_state{
+    font-size: 22px;
+}
+
+
+
+.extra_title2_div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+    color: var(--blue);
+    font-family: haas;
+}

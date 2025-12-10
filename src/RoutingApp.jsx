@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Skills from './pages/Skills';
 import ProjectManage from "./pages/ProjectManage";
+import Profile from "./pages/Profile";
+
 
 const RoutingApp = () => {
     return ( 
@@ -14,6 +16,7 @@ const RoutingApp = () => {
             <Route path='/Login' element={<Login />} />
             <Route path='/Skills' element={<Skills />} />
             <Route path='/ProjectManage' element={<ProjectManage />} />
+            <Route path='/Profile' element={<Profile />} />
 
 
         </Routes>

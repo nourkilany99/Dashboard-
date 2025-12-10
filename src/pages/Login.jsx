@@ -6,6 +6,7 @@ import google from '../Assets/google_logo.svg';
 import eye from '../Assets/eye_icon.svg';
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom';
+<meta name="robots" content="noindex, nofollow"></meta>
 
 
 const Login = () => {
