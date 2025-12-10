@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+.dashboard_message_all{
+    width: 80%;
+    padding:10% 10% 2% 10%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.content_message_all{
+    width: 92%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.all_messages_boxs{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.messages_box1{
+    width: 26%;
+    height: 58vh;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--grey);
+    border-radius: 25px;
+    gap: 10px;
+}
+
+.search_btn{
+    width: 94%;
+    padding: 1% 3%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    background-color: #6766669c;
+    border: none;
+    border-radius: 20px;
+    font-family: haas_light;
+    color: #FEF5EA;
+    font-size: 16px;
+}
+
+.all_msgs_div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: haas;
+    color: #fef5eadf;
+    align-items: start;
+    gap: 5px;
+    margin-top: 5%;
+}
+
+.messages_box2{
+    width: 65%;
+    height: 58vh;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--grey);
+    border-radius: 25px;
+    gap: 10px;
+}
+
+.noMsg_div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.mesage_icon{
+    width: 20%;
+    opacity: 25%;
+}
+
+.mesage_p_read{
+    font-size: 18px;
+    color: #fef5ea8b;
+    font-family: haas_light;
+    margin-top: 2%;
+}
+
+.link_problem{
+    font-size: 16px;
+    color: #fef5ea8b;
+    font-family: haas_light;
+    text-decoration: underline;
+    
+}

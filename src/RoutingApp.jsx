@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Skills from './pages/Skills';
 import ProjectManage from "./pages/ProjectManage";
 import Profile from "./pages/Profile";
+import Message from './pages/Message';
 
 
 const RoutingApp = () => {
@@ -17,6 +18,7 @@ const RoutingApp = () => {
             <Route path='/Skills' element={<Skills />} />
             <Route path='/ProjectManage' element={<ProjectManage />} />
             <Route path='/Profile' element={<Profile />} />
+            <Route path='/Message' element={<Message />} />
 
 
         </Routes>
