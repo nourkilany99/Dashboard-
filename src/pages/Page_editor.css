@@ -70,12 +70,12 @@ body{
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: 2px;
+    gap: 15px;
 
 }
 
 .edit_div1_d1{
-    width: 100%;
+    width: 96%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,4 +83,18 @@ body{
     background-color: var(--grey);
     border-radius: 25px;
     padding: 2%;
+}
+.edit_div1_d2{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 25px;
+}
+.img_change_p{
+    font-family: haas_light;
+    color: #a5becc96;
+    font-size: 14px;
 }

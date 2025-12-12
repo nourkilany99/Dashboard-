@@ -6,6 +6,9 @@ import Title from '../Common/Title';
 import DropDown_btn from '../Common/DropDown_btn';
 import Title3 from '../Common/Title3';
 import TextEditor from '../Common/TextEditor';
+import ImageEditor from '../Common/ImageEditor';
+import uploadHeroImage from '../Assets/hero_img_edit.svg'
+import uploadHero2Image from '../Assets/uploadHero2Image.svg'
 
 const Page_editor = () => {
     return (<> 
@@ -31,6 +34,41 @@ const Page_editor = () => {
                 <div className='edit_div1_d1'>
                     <TextEditor />
                 </div>
+
+                <div className='edit_div1_d2'>
+                    <ImageEditor 
+                    imageUrl={uploadHeroImage}
+                    title="Hero Image"
+                    subtitle="Change hero banner"
+                    onChange={(file) => 
+                    {uploadHeroImage(file);}}
+                     />
+                    <p className='img_change_p'>A common hero image size is 1280 x 720 pixels with a 16:9 aspect ratio</p>
+                </div>
+
+
+
+                <Title3 title='Meta description' />
+
+                <div className='edit_div1_d1'>
+                    <TextEditor />
+                </div>
+
+                <div className='edit_div1_d1'>
+                    <TextEditor />
+                </div>
+
+                <div className='edit_div1_d2'>
+                    <ImageEditor 
+                    imageUrl={uploadHero2Image}
+                    title="About Image"
+                    subtitle="Change About banner"
+                    onChange={(file) => 
+                    {uploadHeroImage(file);}}
+                     />
+                    <p className='img_change_p'>A common hero image size is 1280 x 720 pixels with a 16:9 aspect ratio</p>
+                </div>
+
             </div>
 
         </div>
