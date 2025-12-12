@@ -8,6 +8,7 @@ import Profile from "./pages/Profile";
 import Message from './pages/Message';
 import ProjectEdit from './pages/Page_editor';
 import Blog from './pages/Blog';
+import Category from './pages/Category';
 
 
 const RoutingApp = () => {
@@ -23,6 +24,7 @@ const RoutingApp = () => {
             <Route path='/Message' element={<Message />} />
             <Route path='/ProjectEdit' element={<ProjectEdit />} />
             <Route path='/Blog' element={<Blog />} />
+            <Route path='/Category' element={<Category/>} />
 
 
         </Routes>

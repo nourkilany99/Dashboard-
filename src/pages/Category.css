@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+.dashboard_category_all{
+    width: 80%;
+    padding:10% 10% 2% 10%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content_category_all{
+    width: 92%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title_actions_cat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.action_categ{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action_categ_search{
+    width: 60%;
+    padding:0.5% 2%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--grey);
+    border-radius: 25px;
+    border: none;
+}
+
+.action_categ_btns{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+}
+
+.card_blog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rest_blog{
+    width: 96%;
+    margin: 0 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.categ_cards_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    width: 100%;
+
+}
+
+.category_card {
+    width: 100%;
+    background: #2f2f2f;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category_card_img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.category_card_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: #fff;
+}
