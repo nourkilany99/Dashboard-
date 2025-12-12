@@ -46,21 +46,7 @@ aside{
     border-radius: 40px;
 }
 
-.home_icon_btn{
-    width: 90%;
-    padding: 0 5%;
-    background-color: var(--sec_txt_colot);
-    border: none;
-    height: 7vh;
-    border-radius: 50vh;
-    font-family: haas;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
+.home_icon_btn,
 .project_icon_btn,
 .gallery_icon_btn,
 .skills_icon_btn,
@@ -116,3 +102,6 @@ aside{
     z-index: 9999; 
 }
 
+.active_btn {
+    background-color: var(--sec_txt_colot) !important; /* purple */
+}

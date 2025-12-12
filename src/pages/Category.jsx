@@ -13,6 +13,7 @@ import img3 from '../Assets/project3.svg';
 import img4 from '../Assets/project3.svg';
 import img5 from '../Assets/activityImg2.svg';
 import CategoryCard from '../Common/CategoryCard';
+import Footer from '../components/Footer'
 
 
 const Category = () => {
@@ -59,6 +60,8 @@ const Category = () => {
         </div>
 
     </div>
+
+    <Footer />
 
     
 
