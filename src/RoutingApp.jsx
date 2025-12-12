@@ -6,7 +6,8 @@ import Skills from './pages/Skills';
 import ProjectManage from "./pages/ProjectManage";
 import Profile from "./pages/Profile";
 import Message from './pages/Message';
-import ProjectEdit from './pages/Page_editor'
+import ProjectEdit from './pages/Page_editor';
+import Blog from './pages/Blog';
 
 
 const RoutingApp = () => {
@@ -21,6 +22,7 @@ const RoutingApp = () => {
             <Route path='/Profile' element={<Profile />} />
             <Route path='/Message' element={<Message />} />
             <Route path='/ProjectEdit' element={<ProjectEdit />} />
+            <Route path='/Blog' element={<Blog />} />
 
 
         </Routes>

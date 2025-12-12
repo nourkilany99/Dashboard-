@@ -1,0 +1,82 @@
+.blogCard_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 22px;
+    gap: 20px;
+    position: relative;
+}
+
+/* Thumbnail */
+.blogCard_img img {
+    width: 220px;
+    height: 160px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/* Left text */
+.blogCard_info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #fff;
+}
+
+.blogCard_label {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.blogCard_title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.blogCard_category {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+/* Right side */
+.blogCard_right {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    width: 50%;
+}
+
+/* Publish toggle area */
+.publish_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.status_label {
+    font-size: 13px;
+    opacity: 0.6;
+    color: white;
+}
+
+/* Meta info */
+.meta_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #ccc;
+    font-size: 14px;
+    gap: 3px;
+}
+
+/* Buttons row */
+.action_buttons {
+    width: 100%;
+    display: flex;
+    gap: 2px;
+}
