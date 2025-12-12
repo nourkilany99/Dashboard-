@@ -11,6 +11,7 @@ import Statecard from '../Common/State_card';
 import Title3 from '../Common/Title3';
 import BlogCard from '../Common/Blogcard';
 import blogThumb from '../Assets/blog1thumb.svg';
+import Footer from '../components/Footer'
 
 const Blog = () => {
     return (<> 
@@ -66,11 +67,60 @@ const Blog = () => {
                 />
             </div>
 
+            <Title3 title="All blogs " />
+
+            <div className='rest_blog'>
+                <BlogCard
+                image={blogThumb}
+                title="UI/UX Problems"
+                category="UI/UX"
+                date="20 Dec 2025"
+                views="2,345"
+                published={true}
+                onTogglePublish={() => {}}
+                onEdit={() => {}}
+                onView={() => {}}
+                onCopy={() => {}}
+                onDelete={() => {}}
+                />
+
+                <BlogCard
+                image={blogThumb}
+                title="UI/UX Problems"
+                category="UI/UX"
+                date="20 Dec 2025"
+                views="2,345"
+                published={true}
+                onTogglePublish={() => {}}
+                onEdit={() => {}}
+                onView={() => {}}
+                onCopy={() => {}}
+                onDelete={() => {}}
+                />
+
+                <BlogCard
+                image={blogThumb}
+                title="UI/UX Problems"
+                category="UI/UX"
+                date="20 Dec 2025"
+                views="2,345"
+                published={true}
+                onTogglePublish={() => {}}
+                onEdit={() => {}}
+                onView={() => {}}
+                onCopy={() => {}}
+                onDelete={() => {}}
+                />
+            </div>
+
 
 
         </div>
 
+        
+
     </div>
+    <Footer />
 
 
     </>);

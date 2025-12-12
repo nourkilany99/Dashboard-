@@ -83,3 +83,13 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.rest_blog{
+    width: 96%;
+    margin: 0 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
