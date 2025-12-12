@@ -1,0 +1,134 @@
+/* Overall layout */
+.editor-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* -----------------------------
+   SAVED VIEW (White box)
+------------------------------ */
+.saved-box {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #d6d6d6;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-content {
+  font-size: 15px;
+  color: #333;
+  max-width: 85%;
+}
+
+.edit-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #e8e8e8;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #dcdcdc;
+}
+
+/* -----------------------------
+   TOOLBAR
+------------------------------ */
+.toolbar {
+  display: flex;
+  gap: 6px;
+  background: #e6e6e6;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #d2d2d2;
+}
+
+.toolbar button {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  color: #444;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background: #d0d0d0;
+}
+
+/* -----------------------------
+   TEXT EDITOR
+------------------------------ */
+.editor {
+  background: #ffffff;
+  border: 1px solid #d4d4d4;
+  border-radius: 12px;
+  padding: 14px 16px;
+  min-height: 140px;
+  outline: none;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* -----------------------------
+   ACTION BUTTONS
+------------------------------ */
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.preview-btn, .save-btn, .cancel-btn, .back-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  cursor: pointer;
+}
+
+.preview-btn {
+  background: #f0f0f0;
+}
+
+.preview-btn:hover {
+  background: #e6e6e6;
+}
+
+.save-btn {
+  background: #4d8fff;
+  color: white;
+  border: none;
+}
+
+.save-btn:hover {
+  background: #3d76d7;
+}
+
+.cancel-btn {
+  background: #ececec;
+}
+
+.cancel-btn:hover {
+  background: #dedede;
+}
+
+/* -----------------------------
+   PREVIEW MODE
+------------------------------ */
+.preview-box {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #d6d6d6;
+  padding: 20px;
+}
+
+.preview-content {
+  font-size: 15px;
+  color: #333;
+}

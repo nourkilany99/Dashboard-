@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bck_color:#FEF5EA;
+    --txt_color:#2d2d2e;
+    --txt_color_light:#2d2d2e83;
+    --sec_txt_colot:#6C2A9B;
+    --font0:24px;
+    --font1:32px;
+    --font2:40px;
+    --font3:48px;
+    --grey:#474747;
+    --blue:#A5BECC;
+    --beige:#D4AEA1;
+    --beige_light:#d4aea162;
+}
+
+body{
+    font-family: haas;
+    background-color: var(--txt_color);
+}
+
+@font-face {
+    font-family: haas;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-55Roman-Trial.otf);
+}
+
+@font-face {
+    font-family: haas_light;
+    src: url(../font/haas_font/NeueHaasGrotDispRound-45Light-Trial.otf);
+}
+
+.dashboard_edit_project{
+    width: 80%;
+    padding:10% 10% 2% 10%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.content_edit_project{
+    width: 92%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.edit_page_title_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hr_page_edit{
+    width: 100%;
+    border: solid 0.1px #fef5ea55;
+    margin: 2% 0;
+}
+
+.edit_div1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2px;
+
+}
+
+.edit_div1_d1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--grey);
+    border-radius: 25px;
+    padding: 2%;
+}

@@ -4,7 +4,7 @@ import Nav from '../components/Nav';
 import Aside from '../components/Aside';
 import Title from '../Common/Title';
 import search from '../Assets/search_icon.svg';
-import Dropdown from '../Common/dropDown_btn';
+import Dropdown from '../Common/DropDown_btn';
 import Messageinbox from '../Common/Message_inbox';
 import message from '../Assets/message_icon.svg';
 import Footer from '../components/Footer'

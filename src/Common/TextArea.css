@@ -1,0 +1,125 @@
+/* Layout wrapper */
+.text-editor-wrapper {
+  display: flex;
+  gap: 20px;
+  background: #2d2d2e;
+  padding: 20px;
+  border-radius: 14px;
+  width: 100%;
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Left side */
+.editor-left {
+  width: 100%;
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Toolbar */
+.toolbar {
+  background: #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid #d1d1d1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolbar button {
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #3a3a3a;
+}
+
+.toolbar button:hover {
+  background: #d9d9d9;
+}
+
+/* Editor box */
+.editor {
+  background: white;
+  border-radius: 12px;
+  margin-top: 12px;
+  padding: 16px;
+  min-height: 140px;
+  border: 1px solid #d4d4d4;
+  color: #2d2d2e;
+  font-size: 15px;
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: embed !important;
+}
+
+/* Saved preview */
+.saved-box {
+  background: white;
+  margin-top: 12px;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #d4d4d4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-text {
+  width: 85%;
+  font-size: 15px;
+  color: #2d2d2e;
+  line-height: 1.5;
+}
+
+/* Edit button */
+.edit-btn {
+  background: #e5e5e5;
+  border: 1px solid #c9c9c9;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Right panel */
+.preview-panel {
+  width: 120px;
+  background: #3a3a3a;
+  border-radius: 12px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Circle eye button */
+.view-btn {
+  background: #4c4c4d;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.eye-icon {
+  font-size: 20px;
+}
+
+/* "View live" text */
+.preview-panel p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #dcdcdc;
+  direction: ltr !important;
+  text-align: left !important;
+}

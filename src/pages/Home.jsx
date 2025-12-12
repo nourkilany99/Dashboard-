@@ -11,7 +11,7 @@ import add from '../Assets/add_icon.svg';
 import blog from '../Assets/post_icon.svg';
 import upload from '../Assets/upload_icon.svg';
 import message from '../Assets/message_action_icon.svg'
-import Dropdown from '../Common/dropDown_btn'
+import Dropdown from '../Common/DropDown_btn'
 import ExploreBtn from '../Common/ExploreBtn';
 import chart1 from '../Assets/chart1.svg';
 import chart2 from '../Assets/chart2.svg';
