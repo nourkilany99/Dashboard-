@@ -1,0 +1,18 @@
+.triple-editor-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.triple-slot {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 220px;
+  position: relative;
+}
+
+.triple-slot .hero-editor {
+  height: 100%;
+}
