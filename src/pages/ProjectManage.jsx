@@ -10,12 +10,14 @@ import project1 from '../Assets/project1.svg';
 import project2 from '../Assets/project2.svg';
 import project3 from '../Assets/project3.svg';
 import Footer2 from '../components/Footer2';
+import AddProjectModal from '../Common/AddProjectModal';
 import './mobileproject.css'
-
 
 const ProjectManage = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("Graphic design projects");
+
+    const [showAddModal, setShowAddModal] = useState(false);
 
     const projectData = {
         "Graphic design projects": [project1, project2, project3],
@@ -34,19 +36,25 @@ const ProjectManage = () => {
                 <div className='content_skills_all'>
                     <div className='project_hero_d'>
                         <Title title='Projects Manager' subtitle='Managing all projects on your portfolio projects' />
-                        <AddBtn title='Add New Project' />
+
+                        <AddBtn 
+                            title='Add New Project'
+                            onClick={() => setShowAddModal(true)}
+                        />
                     </div>
 
                     <div className='extra_prjctsDiv'>
 
-                        {/* ---- LEFT SIDEBAR ---- */}
                         <div className='projects_by_category'>
                             {Object.keys(projectData).map(category => (
-                                <ProjectsSide key={category} projectName={category} onClick={() => setSelectedCategory(category)}/>
+                                <ProjectsSide 
+                                    key={category} 
+                                    projectName={category} 
+                                    onClick={() => setSelectedCategory(category)}
+                                />
                             ))}
                         </div>
 
-                        {/* ---- RIGHT POSTER AREA ---- */}
                         <div className='poster_all_work_div'>
                             {projectData[selectedCategory].map((poster, index) => (
                                 <ProjectPoster key={index} ProjectPoster={poster} />
@@ -58,6 +66,12 @@ const ProjectManage = () => {
                     <Footer2 />
                 </div>
             </div>
+
+            {/* ---- ADD PROJECT MODAL ---- */}
+            <AddProjectModal 
+                isOpen={showAddModal} 
+                onClose={() => setShowAddModal(false)} 
+            />
         </>
     );
 }
