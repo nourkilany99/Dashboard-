@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Blog.css';
 import Nav from '../components/Nav';
 import Aside from '../components/Aside';
@@ -11,9 +11,40 @@ import Statecard from '../Common/State_card';
 import Title3 from '../Common/Title3';
 import BlogCard from '../Common/Blogcard';
 import blogThumb from '../Assets/blog1thumb.svg';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import {supabase} from '../Supabase';
 
 const Blog = () => {
+    const [loading, setLoading] = useState(true);
+    const [Insights,setInsights] = useState("");
+    const [DashHero,setDashHero] = useState("");
+    const [Cards,setBlogCard] = useState("");
+
+    useEffect(()=>{
+                    
+            
+        async function getPageData(){
+            const res = await supabase.from("Insights").select("*");
+            const DashHerores = await supabase.from("DashHero").select("*");
+            const BlogCardres = await supabase.from("Cards").select("*");
+
+
+            setDashHero(DashHerores.data);
+            setInsights(res.data);
+            setBlogCard(BlogCardres.data);
+        
+            setLoading(false);
+        }
+            
+        getPageData()
+            
+            
+            
+        },[])
+        if (loading) return <p>Loading....</p>;
+
+
+
     return (<> 
     <Nav />
 
@@ -22,7 +53,19 @@ const Blog = () => {
         <Aside />
 
         <div className='content_blog_all'>
-            <Title title='Blog page' subtitle='Manage all blog posts, drafts, categories, and comments in one place.' />
+
+            {
+            DashHero
+            .filter(DashHero => DashHero.id === 4)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title title={DashHero.Title} subtitle={DashHero.Subtitle} />
+            </>
+
+            })
+            }
+
 
             <div className='action_blog'>
                 <button className='action_blog_search'>
@@ -39,78 +82,114 @@ const Blog = () => {
 
             <section className='state_cards'>
 
-                <Title title="Blog Insights" />
+                {
+                DashHero
+                .filter(DashHero => DashHero.id === 14)
+                .map((DashHero)=>{
+
+                return  <>
+                <Title title={DashHero.Title}  />
+                </>
+
+                })
+                }
+
 
                 <div className='Collection_state'>
-                    <Statecard title='Total Posts' number="120 " note='15 new this month ' />
-                    <Statecard title='Drafts' number="7" note='unpublished  ' />
-                    <Statecard title='Pending Comments' number="23 " note='awaiting approval ' />
+
+                {
+                Insights
+                .filter(Insights => Insights.id === 4 || Insights.id === 5 ||  Insights.id === 6  )
+                .map((Insights)=>{
+
+                return  <>
+                 <Statecard title={Insights.title} number={Insights.number} note={Insights.note} />
+                </>
+
+                })
+                }
+
                 </div>
 
             </section>
 
-            <Title3 title="Latest blog published " />
+
+            {
+            DashHero
+            .filter(DashHero => DashHero.id === 15)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title3 title={DashHero.Title}  />
+            </>
+
+            })
+            }
+
 
             <div className='card_blog'>
+                {Cards
+                .filter(Cards => Cards.id === 1)
+                .map((Cards)=>{
+
+                return  <>
                 <BlogCard
-                image={blogThumb}
-                title="UI/UX Problems"
+                image={Cards.Image}
+                title={Cards.BlogName}
                 category="UI/UX"
-                date="20 Dec 2025"
-                views="2,345"
-                published={true}
+                date={Cards.Date}
+                views={Cards.Views}
+                published={Cards.Publish}
                 onTogglePublish={() => {}}
                 onEdit={() => {}}
                 onView={() => {}}
                 onCopy={() => {}}
                 onDelete={() => {}}
                 />
+                </>
+
+                })
+                }
+
             </div>
 
-            <Title3 title="All blogs " />
+            {
+            DashHero
+            .filter(DashHero => DashHero.id === 16)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title3 title={DashHero.Title}  />
+            </>
+
+            })
+            }
+
 
             <div className='rest_blog'>
-                <BlogCard
-                image={blogThumb}
-                title="UI/UX Problems"
-                category="UI/UX"
-                date="20 Dec 2025"
-                views="2,345"
-                published={true}
-                onTogglePublish={() => {}}
-                onEdit={() => {}}
-                onView={() => {}}
-                onCopy={() => {}}
-                onDelete={() => {}}
-                />
+                {Cards
+                .filter(Cards => Cards.id === 2 || Cards.id===3 || Cards.id===4 )
+                .map((Cards)=>{
 
+                return  <>
                 <BlogCard
-                image={blogThumb}
-                title="UI/UX Problems"
+                image={Cards.Image}
+                title={Cards.BlogName}
                 category="UI/UX"
-                date="20 Dec 2025"
-                views="2,345"
-                published={true}
+                date={Cards.Date}
+                views={Cards.Views}
+                published={Cards.Publish}
                 onTogglePublish={() => {}}
                 onEdit={() => {}}
                 onView={() => {}}
                 onCopy={() => {}}
                 onDelete={() => {}}
                 />
+                </>
 
-                <BlogCard
-                image={blogThumb}
-                title="UI/UX Problems"
-                category="UI/UX"
-                date="20 Dec 2025"
-                views="2,345"
-                published={true}
-                onTogglePublish={() => {}}
-                onEdit={() => {}}
-                onView={() => {}}
-                onCopy={() => {}}
-                onDelete={() => {}}
-                />
+                })
+                }
+
             </div>
 
 

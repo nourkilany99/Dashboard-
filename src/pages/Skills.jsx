@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Skills.css';
 import Nav from '../components/Nav';
 import Aside from '../components/Aside';
@@ -6,19 +6,38 @@ import Title from '../Common/Title';
 import AddBtn from '../Common/AddBtn';
 import Line from '../Common/Line';
 import SkillsInput from '../Common/SkillsInput';
-import figma from '../Assets/fihma.svg';
-import ps from '../Assets/ps.svg';
-import Ai from '../Assets/AI.svg';
-import vsc from '../Assets/VSC.svg';
-import pr from '../Assets/PR.svg';
-import problem_icon from '../Assets/Problem_icon.svg';
-import blender from '../Assets/blender.svg';
 import Footer2 from '../components/Footer2';
-import './SkillsMob.css'
+import './SkillsMob.css';
+import {supabase} from '../Supabase';
 
 
 const Skills = () => {
+    const [loading, setLoading] = useState(true);
+    const [skills,setSkills] = useState("");
+    const [DashHero,setDashHero] = useState("");
+    
+    useEffect(()=>{
+
+
+        async function getPageData(){
+            const res = await supabase.from("Skills").select("*");
+            const DashHeroRes = await supabase.from("DashHero").select("*");
+            
+        
+            setSkills(res.data);
+            setDashHero(DashHeroRes.data);
+            setLoading(false);
+            }
+                
+            getPageData()
+
+
+
+    },[])
+    if (loading) return <p>Loading....</p>;
+
     return (<>
+    {console.log(skills)}
 
     <Nav />
 
@@ -28,7 +47,19 @@ const Skills = () => {
 
         <div className='content_skills_all'>
 
-        <Title title='Skills Management' subtitle='Organize and update all the skills displayed in your portfolio. Add new skills, group them by category, and manage their visibility.' />
+        
+        {
+            DashHero
+            .filter(DashHero => DashHero.id === 3)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title title={DashHero.Title} subtitle={DashHero.Subtitle} />
+            </>
+
+            })
+        }
+
 
         <div className='Skills_d1'>
             <div className='d1_d_skills'>
@@ -52,22 +83,19 @@ const Skills = () => {
                 <h3>Actions</h3>
             </div>
 
-            <Line />
+        {
+        skills.map((skill)=>{
 
-            <SkillsInput Skills_img={figma} Name='Figma' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
-            <Line />
-            <SkillsInput Skills_img={ps} Name='Photoshop' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
-            <Line />
-            <SkillsInput Skills_img={Ai} Name='Illustration' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
-            <Line />
-            <SkillsInput Skills_img={vsc} Name='Visual studio code' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
-            <Line />
-            <SkillsInput Skills_img={pr} Name='premiere' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
-            <Line />
-            <SkillsInput Skills_img={problem_icon} Name='Problem solving' type='Soft skill' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
-            <Line />
-            <SkillsInput Skills_img={blender} Name='Blender' type='Tool' level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
-            <Line />
+        return  <>
+        <SkillsInput Skills_img={skill.Icon} Name={skill.Name} type={skill.Type} level='Expert' category='UI/UX' Status='Published' dateUpdate='12/12/2025' />
+        <Line />
+        </>
+
+
+        })
+        }
+
+        
             
 
 

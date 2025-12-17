@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Page_editor.css';
 import Nav from '../components/Nav';
 import Aside from '../components/Aside';
@@ -13,9 +13,18 @@ import TripleImageEditor from '../Common/TripleImageEditor';
 import mock1Image from '../Assets/mock1_edit.svg';
 import mock2Image from '../Assets/mock2_edit.svg';
 import mock3Image from '../Assets/mock3_edit.svg';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import {supabase} from '../Supabase';
 
 const Page_editor = () => {
+    const [loading, setLoading] = useState(true);
+    const [DashHero,setDashHero] = useState("");
+    const [EditPage,setEditPage] = useState("");
+    
+
+
+
+
     const [mockups, setMockups] = useState([
     mock1Image,
     mock2Image,
@@ -32,6 +41,28 @@ const Page_editor = () => {
   };
 
 
+    useEffect(()=>{
+
+        async function getPageData(){
+        const res = await supabase.from("DashHero").select("*");
+        const EditPageres = await supabase.from("EditPage").select("*");
+
+
+        setDashHero(res.data);
+        setEditPage(EditPageres.data)
+
+
+        setLoading(false);
+        }
+        
+        getPageData()
+        
+        
+        
+        },[])
+      if (loading) return <p>Loading....</p>;
+
+
 
 
     return (<> 
@@ -45,33 +76,81 @@ const Page_editor = () => {
         <div className='content_edit_project'>
 
             <div className='edit_page_title_div'>
-            <Title title='Page editor' subtitle='Organize your content by creating categories  ,tags, and custom pages' />
+
+            {
+            DashHero
+            .filter(DashHero => DashHero.id === 2)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title title={DashHero.Title} subtitle={DashHero.Subtitle} />
+            </>
+
+            })
+            }
+
+
             <DropDown_btn label='Landing page' width='20%' />
             </div>
 
             <hr className='hr_page_edit'></hr>
 
             <div className='edit_div1'>
-                <Title3 title='Meta description' />
+
+            {
+            DashHero
+            .filter(DashHero => DashHero.id === 10)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title3 title={DashHero.Title}  />
+            </>
+
+            })
+            }
+    
 
                 <div className='edit_div1_d1'>
                     <TextEditor />
                 </div>
 
                 <div className='edit_div1_d2'>
+
+                    {
+                    EditPage
+                    .filter(EditPage => EditPage.id === 1 || EditPage.id === 2)
+                    .map((EditPage)=>{
+
+                    return  <>
                     <ImageEditor 
-                    imageUrl={uploadHeroImage}
-                    title="Hero Image"
-                    subtitle="Change hero banner"
+                    imageUrl={EditPage.Image}
+                    title={EditPage.Title}
+                    subtitle={EditPage.ActionName}
                     onChange={(file) => 
                     {uploadHeroImage(file);}}
                      />
+                    </>
+
+                    })
+                    }
+
+
                     <p className='img_change_p'>A common hero image size is 1280 x 720 pixels with a 16:9 aspect ratio</p>
                 </div>
 
 
+                {
+                DashHero
+                .filter(DashHero => DashHero.id === 11)
+                .map((DashHero)=>{
 
-                <Title3 title='Home section 2' />
+                return  <>
+                <Title3 title={DashHero.Title}  />
+                </>
+
+                })
+                }
+               
 
                 <div className='edit_div1_d1'>
                     <TextEditor />
@@ -82,6 +161,25 @@ const Page_editor = () => {
                 </div>
 
                 <div className='edit_div1_d2'>
+
+                     {
+                    EditPage
+                    .filter(EditPage => EditPage.id === 3)
+                    .map((EditPage)=>{
+
+                    return  <>
+                    <ImageEditor 
+                    imageUrl={EditPage.Image}
+                    title={EditPage.Title}
+                    subtitle={EditPage.ActionName}
+                    onChange={(file) => 
+                    {uploadHeroImage(file);}}
+                     />
+                    </>
+
+                    })
+                    }
+
                     <ImageEditor 
                     imageUrl={uploadHero2Image}
                     title="About Image"
@@ -92,7 +190,18 @@ const Page_editor = () => {
                     <p className='img_change_p'>A common hero image size is 1280 x 720 pixels with a 16:9 aspect ratio</p>
                 </div>
 
-                <Title3 title='Home section 3' />
+
+                {
+                DashHero
+                .filter(DashHero => DashHero.id === 12)
+                .map((DashHero)=>{
+
+                return  <>
+                <Title3 title={DashHero.Title}  />
+                </>
+
+                })
+                }
 
                 <div className='edit_div1_d2'>
                     <TripleImageEditor
@@ -102,7 +211,18 @@ const Page_editor = () => {
                 />
                 </div>
 
-                <Title3 title='Home section 4' />
+                {
+                DashHero
+                .filter(DashHero => DashHero.id === 13)
+                .map((DashHero)=>{
+
+                return  <>
+                <Title3 title={DashHero.Title}  />
+                </>
+
+                })
+                }
+
 
                 <div className='edit_div1_d1'>
                     <TextEditor />

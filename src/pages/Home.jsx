@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Nav from '../components/Nav';
 import Aside from '../components/Aside';
 import './Home.css';
@@ -22,9 +22,49 @@ import activeimg2 from '../Assets/activityImg2.svg';
 import activeimg3 from '../Assets/activityImg3.svg';
 import InsightsPies from '../Common/InsightsPies';
 import pieChart from '../Assets/PieChart2.svg';
-import Footer2 from '../components/Footer2'
+import Footer2 from '../components/Footer2';
+import {supabase} from '../Supabase';
+
 
 const Home = () => {
+   
+
+    const [loading, setLoading] = useState(true);
+    const [Insights,setInsights] = useState("");
+    const [QuickActions, setQuickActions] = useState([]);
+    const [Activity, setActivity] = useState([]);
+    const [DashHero,setDashHero] = useState("");
+    
+    
+            
+    useEffect(()=>{
+                
+        
+    async function getPageData(){
+        const res = await supabase.from("Insights").select("*");
+        const quickActionsRes = await supabase.from("QuickActions").select("*");
+        const ActivityRes = await supabase.from("Activity").select("*");
+        const herores = await supabase.from("DashHero").select("*");
+
+        setInsights(res.data);
+        setDashHero(herores.data);
+        setQuickActions(quickActionsRes.data);
+        setActivity(ActivityRes.data);
+        setLoading(false);
+    }
+        
+    getPageData()
+        
+        
+        
+    },[])
+    if (loading) return <p>Loading....</p>;
+
+
+
+
+
+
     return (<>
 
     <Nav />
@@ -80,23 +120,63 @@ const Home = () => {
 
             <section className='state_cards'>
 
-                <Title title="State_cards" />
+
+            {
+            DashHero
+            .filter(DashHero => DashHero.id === 7)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title title={DashHero.Title}  />
+            </>
+
+            })
+            }
 
                 <div className='Collection_state'>
-                    <Statecard title='Complete Projects' number="743,980 " note='30% increase over the past two months ' />
-                    <Statecard title='Total Blog Posts' number="34 " note='5 added in the last 2 days ' />
-                    <Statecard title='Site Visits (Last 7 Days)' number="5385 " note='10% increase over the last two weeks' />
+
+                {
+                Insights
+                .filter(Insights => Insights.id === 1 || Insights.id === 2 ||  Insights.id === 3  )
+                .map((Insights)=>{
+
+                return  <>
+                 <Statecard title={Insights.title} number={Insights.number} note={Insights.note} />
+                </>
+
+                })
+                }
                 </div>
 
             </section>
 
             <div className='quick_actions'>
-            <Title title='Quick Actions'/>
+
+            {
+            DashHero
+            .filter(DashHero => DashHero.id === 8)
+            .map((DashHero)=>{
+
+            return  <>
+            <Title title={DashHero.Title}  />
+            </>
+
+            })
+            }
+
             <div className='all_quick_btns'>
-                <QuickActionBtn icon={add} action='Add a new project' />
-                <QuickActionBtn icon={blog} action='Write a post' />
-                <QuickActionBtn icon={upload} action='Exhibition Item for Lifting' />
-                <QuickActionBtn icon={message} action='View Messages' />
+
+                 {
+                QuickActions.map((QuickActions)=>{
+
+                return  <>
+                 <QuickActionBtn route={QuickActions.Links} icon={QuickActions.Icon} action={QuickActions.Buttons}  />
+                </>
+
+                })
+                }
+
+
             </div>
             </div>
 
@@ -136,7 +216,18 @@ const Home = () => {
             <div className='Activity'>
 
                 <div className='activity_hero_d'>
-                <Title title='Activity Nutrition' />
+                {
+                DashHero
+                .filter(DashHero => DashHero.id === 9)
+                .map((DashHero)=>{
+
+                return  <>
+                <Title title={DashHero.Title}  />
+                </>
+
+                })
+                }
+
                 <div className='activity_d1_btns'>
                         <Dropdown label="Last 24 downloads" width="200px" />
                         <ExploreBtn width="42px" />
@@ -145,10 +236,18 @@ const Home = () => {
                 </div>
 
                 <div className='activity_card_main_cntnt'>
-                    <ActivityCard activimg={activeimg1} activ_name='Jana Yasser' theActivity='Added a new UI/UX project' activityDate='October 24, 2025 ' />
-                    <ActivityCard activimg={activeimg2} activ_name='Ali Ahmed' theActivity='Added a new UI/UX project' activityDate='October 24, 2025 ' />
-                    <ActivityCard activimg={activeimg3} activ_name='Nour Ziad' theActivity='Added a new UI/UX project' activityDate='October 24, 2025 ' />
+                    {
+                     Activity.map((Activity)=>{
+
+                    return  <>
+                    <ActivityCard activimg={Activity.Img} activ_name={Activity.Name} theActivity={Activity.Activity} activityDate={Activity.Date} />
+                    </>
+
+                    })
+                    }
+
                 </div>
+
 
             </div>
 

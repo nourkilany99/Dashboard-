@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProjectManage.css'
 import Nav from '../components/Nav';
 import Aside from '../components/Aside';
@@ -11,9 +11,13 @@ import project2 from '../Assets/project2.svg';
 import project3 from '../Assets/project3.svg';
 import Footer2 from '../components/Footer2';
 import AddProjectModal from '../Common/AddProjectModal';
-import './mobileproject.css'
+import './mobileproject.css';
+import {supabase} from '../Supabase';
 
 const ProjectManage = () => {
+
+    const [loading, setLoading] = useState(true);
+    const [DashHero,setDashHero] = useState("");
 
     const [selectedCategory, setSelectedCategory] = useState("Graphic design projects");
 
@@ -27,6 +31,33 @@ const ProjectManage = () => {
         "Photography": [project1, project3],
     };
 
+
+
+    useEffect(()=>{
+                
+        
+            async function getAllProjectManageAPI(){
+                const res = await supabase.from("DashHero").select("*");
+                setDashHero(res.data);
+                setLoading(false);
+            }
+        
+            getAllProjectManageAPI ()
+        
+        
+        
+            },[])
+    if (loading) return <p>Loading....</p>;
+
+
+
+
+
+
+
+
+
+
     return (
         <>
             <Nav />
@@ -35,15 +66,28 @@ const ProjectManage = () => {
 
                 <div className='content_skills_all'>
                     <div className='project_hero_d'>
-                        <Title title='Projects Manager' subtitle='Managing all projects on your portfolio projects' />
 
-                        <AddBtn 
-                            title='Add New Project'
-                            onClick={() => setShowAddModal(true)}
-                        />
+
+                    {DashHero.filter(DashHero => DashHero.id === 1).map((DashHero)=>{
+                    return  <>
+                    <Title title={DashHero.Title} subtitle={DashHero.Subtitle} />
+                    </>
+                    })}
+
+                    <AddBtn 
+                    title='Add New Project'
+                    onClick={() => setShowAddModal(true)}
+                    />
                     </div>
 
                     <div className='extra_prjctsDiv'>
+
+
+
+
+
+
+                        
 
                         <div className='projects_by_category'>
                             {Object.keys(projectData).map(category => (
@@ -54,6 +98,16 @@ const ProjectManage = () => {
                                 />
                             ))}
                         </div>
+
+
+
+
+
+
+
+
+
+
 
                         <div className='poster_all_work_div'>
                             {projectData[selectedCategory].map((poster, index) => (
