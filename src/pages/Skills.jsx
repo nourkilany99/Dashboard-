@@ -10,11 +10,13 @@ import Line from '../Common/Line';
 import SkillsInput from '../Common/SkillsInput';
 import Footer2 from '../components/Footer2';
 import { supabase } from '../Supabase';
+import { useNavigate } from 'react-router-dom';
 
 const Skills = () => {
   const [loading, setLoading] = useState(true);
   const [skills, setSkills] = useState([]);   // ✅ array
   const [DashHero, setDashHero] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getPageData() {
@@ -69,7 +71,7 @@ const Skills = () => {
               <p className="d1_d_skills_p">{skills.length} Skills</p>
             </div>
 
-            <AddBtn title="Add skills" />
+            <AddBtn title="Add skills"  onClick={() => navigate("/skills/add")} />
           </div>
 
           <div className="line_div">

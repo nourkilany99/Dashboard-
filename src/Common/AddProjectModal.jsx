@@ -2,6 +2,9 @@ import React from "react";
 import "./AddProjectModal.css";
 
 const AddProjectModal = ({ isOpen, onClose }) => {
+  
+
+
   if (!isOpen) return null;
 
   return (
