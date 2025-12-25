@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import Nav from '../components/Nav';
 import Aside from '../components/Aside';
@@ -16,9 +16,36 @@ import locationicon from '../Assets/locationicon.svg';
 import EditUserProfile from '../Common/EditUserProfile';
 import profilepercent from '../Assets/profilepercent.svg';
 import share from '../Assets/SaveIcon.svg';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import {supabase} from '../Supabase';
 
 const Profile = () => {
+
+    const [loading, setLoading] = useState(true);
+    const [DashHero,setDashHero] = useState("");
+
+     useEffect(()=>{
+                    
+            
+        async function getPageData(){
+            const herores = await supabase.from("DashHero").select("*");
+    
+            setDashHero(herores.data);
+            setLoading(false);
+        }
+            
+        getPageData()
+            
+            
+            
+        },[])
+        if (loading) return <p>Loading....</p>;
+    
+
+
+
+
+
     return (<>
     <Nav />
 
@@ -36,7 +63,19 @@ const Profile = () => {
 
                 <div className='profile_title_div'>
 
-                    <Title2 title='Profile Settings Page' />
+
+                    {
+                    DashHero
+                    .filter(DashHero => DashHero.id === 17)
+                    .map((DashHero)=>{
+
+                    return  <>
+                    <Title2 title={DashHero.Title}  />
+                    </>
+
+                    })
+                    }
+
 
                     <div className='actions_profile_div'>
                     <AddBtn width="10vw" height='5vh' title='Add section'  />
@@ -51,7 +90,20 @@ const Profile = () => {
 
                     <div className='edit_profile1_info'>
 
-                        <ProfileTitles title='About Me' />
+
+                    {
+                    DashHero
+                    .filter(DashHero => DashHero.id === 18)
+                    .map((DashHero)=>{
+
+                    return  <>
+                    <ProfileTitles title={DashHero.Title}  />
+                    </>
+
+                    })
+                    }
+
+                   
 
                         <div className='about_profile_div'>
                             <div className='about_profile'>
@@ -80,7 +132,17 @@ const Profile = () => {
 
                     <div className='edit_profile2_info'>
 
-                        <ProfileTitles title='Contact Information' />
+                    {
+                    DashHero
+                    .filter(DashHero => DashHero.id === 19)
+                    .map((DashHero)=>{
+
+                    return  <>
+                    <ProfileTitles title={DashHero.Title}  />
+                    </>
+
+                    })
+                    }
 
                         <div className='about_contact_div'>
 
@@ -99,7 +161,17 @@ const Profile = () => {
 
                     <div className='edit_profile3_info'>
 
-                        <ProfileTitles title='Location' />
+                    {
+                    DashHero
+                    .filter(DashHero => DashHero.id === 20)
+                    .map((DashHero)=>{
+
+                    return  <>
+                    <ProfileTitles title={DashHero.Title}  />
+                    </>
+
+                    })
+                    }
 
                         <div className='about_location_div'>
 

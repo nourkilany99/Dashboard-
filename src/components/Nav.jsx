@@ -5,6 +5,7 @@ import search_icon from '../Assets/search_icon.svg';
 import notification_icon from '../Assets/Notification_icon.svg';
 import night_icon from '../Assets/moon_icon.svg';
 import './MobileComp.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,7 +14,7 @@ const Nav = () => {
 
     <nav>
         <div className='nav_d1'>
-        <img src={User_img} alt='user_img' className='user_img' />
+        <Link className="link-reset" to="/Profile" ><img src={User_img} alt='user_img' className='user_img' /></Link>
         <p className='welcome_msg'>Some new ideas<br/>They're waiting for you, Nour!</p>
         </div>
 
