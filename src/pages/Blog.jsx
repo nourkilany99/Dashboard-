@@ -16,9 +16,10 @@ import {supabase} from '../Supabase';
 
 const Blog = () => {
     const [loading, setLoading] = useState(true);
-    const [Insights,setInsights] = useState("");
-    const [DashHero,setDashHero] = useState("");
-    const [Cards,setBlogCard] = useState("");
+    const [Insights, setInsights] = useState([]);
+    const [DashHero, setDashHero] = useState([]);
+    const [Cards, setBlogCard] = useState([]);
+
 
     useEffect(()=>{
                     
@@ -41,6 +42,24 @@ const Blog = () => {
             
             
         },[])
+
+        async function deleteBlog(id) {
+  console.log("DELETE CLICKED, ID =", id);
+
+  const { error } = await supabase
+    .from("Cards")
+    .delete()
+    .eq("id", id);
+
+  if (error) {
+    console.error("SUPABASE DELETE ERROR:", error);
+    return;
+  }
+
+  setBlogCard(prev => prev.filter(card => card.id !== id));
+}
+
+
         if (loading) return <p>Loading....</p>;
 
 
@@ -127,31 +146,28 @@ const Blog = () => {
             }
 
 
-            <div className='card_blog'>
-                {Cards
-                .filter(Cards => Cards.id === 1)
-                .map((Cards)=>{
+        <div className="card_blog">
+        {Cards
+        .filter(card => card.id === 1)
+        .map(card => (
+        <BlogCard
+        key={card.id}
+        image={card.Image}
+        title={card.BlogName}
+        category="UI/UX"
+        date={card.Date}
+        views={card.Views}
+        published={card.Publish}
+        onTogglePublish={() => {}}
+        onEdit={() => {}}
+        onView={() => {}}
+        onCopy={() => {}}
+        onDelete={() => deleteBlog(Cards.id)}   
+        />
+        ))
+        }
+        </div>
 
-                return  <>
-                <BlogCard
-                image={Cards.Image}
-                title={Cards.BlogName}
-                category="UI/UX"
-                date={Cards.Date}
-                views={Cards.Views}
-                published={Cards.Publish}
-                onTogglePublish={() => {}}
-                onEdit={() => {}}
-                onView={() => {}}
-                onCopy={() => {}}
-                onDelete={() => {}}
-                />
-                </>
-
-                })
-                }
-
-            </div>
 
             {
             DashHero
@@ -166,31 +182,28 @@ const Blog = () => {
             }
 
 
-            <div className='rest_blog'>
-                {Cards
-                .filter(Cards => Cards.id === 2 || Cards.id===3 || Cards.id===4 )
-                .map((Cards)=>{
+            <div className="rest_blog">
+  {Cards
+    .filter(card => card.id === 2 || card.id === 3 || card.id === 4)
+    .map(card => (
+      <BlogCard
+        key={card.id}
+        image={card.Image}
+        title={card.BlogName}
+        category="UI/UX"
+        date={card.Date}
+        views={card.Views}
+        published={card.Publish}
+        onTogglePublish={() => {}}
+        onEdit={() => {}}
+        onView={() => {}}
+        onCopy={() => {}}
+        onDelete={() => deleteBlog(Cards.id)}   // ✅
+      />
+    ))
+  }
+</div>
 
-                return  <>
-                <BlogCard
-                image={Cards.Image}
-                title={Cards.BlogName}
-                category="UI/UX"
-                date={Cards.Date}
-                views={Cards.Views}
-                published={Cards.Publish}
-                onTogglePublish={() => {}}
-                onEdit={() => {}}
-                onView={() => {}}
-                onCopy={() => {}}
-                onDelete={() => {}}
-                />
-                </>
-
-                })
-                }
-
-            </div>
 
 
 

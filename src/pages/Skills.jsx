@@ -29,7 +29,7 @@ const Skills = () => {
     getPageData();
   }, []);
 
-  // ✅ DELETE HANDLER (lives in parent)
+
   async function deleteSkill(id) {
     const { error } = await supabase
       .from("Skills")

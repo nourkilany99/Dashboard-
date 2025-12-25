@@ -24,6 +24,7 @@ const BlogCard = ({
     onDelete
 }) => {
     return (
+        
         <div className="blogCard_container">
 
             {/* Thumbnail */}
