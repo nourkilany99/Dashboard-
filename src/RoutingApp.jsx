@@ -22,7 +22,7 @@ const RoutingApp = () => {
             <Route path='/Login' element={<Login />} />
             <Route path='/Skills' element={<Skills />} />
             <Route path="/skills/add" element={<AddSkill />} />
-
+            <Route path="/skills/edit/:id" element={<AddSkill />} />
             <Route path='/ProjectManage' element={<ProjectManage />} />
             <Route path='/Profile' element={<Profile />} />
             <Route path='/Message' element={<Message />} />

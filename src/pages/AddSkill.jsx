@@ -4,7 +4,7 @@ import { supabase } from "../Supabase";
 import { useParams, useNavigate } from "react-router-dom";
 
 const AddSkill = () => {
-  const { id } = useParams(); 
+  const { id } = useParams(); // edit mode if exists
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
@@ -18,7 +18,7 @@ const AddSkill = () => {
     Status: "active",
   });
 
-
+  /* ================= FETCH SKILL (EDIT MODE) ================= */
   useEffect(() => {
     if (!id) return;
 
@@ -29,22 +29,25 @@ const AddSkill = () => {
         .eq("id", id)
         .single();
 
-      if (!error && data) {
-        setForm({
-          Name: data.Name || "",
-          Icon: data.Icon || "",
-          Type: data.Type || "Tool",
-          Level: data.Level || [],
-          Category: data.Category || [],
-          Status: data.Status || "active",
-        });
+      if (error) {
+        console.error(error);
+        return;
       }
+
+      setForm({
+        Name: data.Name || "",
+        Icon: data.Icon || "",
+        Type: data.Type || "Tool",
+        Level: data.Level || [],
+        Category: data.Category || [],
+        Status: data.Status || "active",
+      });
     };
 
     fetchSkill();
   }, [id]);
 
- 
+  /* ================= HANDLERS ================= */
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -68,22 +71,36 @@ const AddSkill = () => {
     });
   };
 
- 
-  const handleSave = async () => {
-    setLoading(true);
+ const handleSave = async () => {
+  setLoading(true);
 
-    const payload = { ...form };
+  const payload = {
+  name: form.Name,
+  icon: form.Icon,
+  type: form.Type,
+  level: form.Level,
+  category: form.Category,
+  status: form.Status,
+};
 
-    const query = id
-      ? supabase.from("Skills").update(payload).eq("id", id)
-      : supabase.from("Skills").insert(payload);
 
-    const { error } = await query;
+  console.log("INSERT PAYLOAD:", payload);
 
-    setLoading(false);
+  const { data, error } = await supabase
+    .from("Skills")
+    .insert([payload]);
 
-    if (!error) navigate(-1);
-  };
+  console.log("SUPABASE RESPONSE:", { data, error });
+
+  setLoading(false);
+
+  if (error) {
+    console.error("INSERT ERROR:", error);
+    return;
+  }
+
+  navigate(0);
+};
 
   return (
     <div className="modal_overlay">
@@ -124,6 +141,7 @@ const AddSkill = () => {
               { key: "web", label: "Web Development" },
             ].map((cat) => (
               <button
+                type="button"
                 key={cat.key}
                 className={
                   form.Category.find((c) => c.key === cat.key)
@@ -141,6 +159,7 @@ const AddSkill = () => {
           <div className="category_row">
             {["Beginner", "Intermediate", "Advanced", "Expert"].map((lvl) => (
               <button
+                type="button"
                 key={lvl}
                 className={form.Level.includes(lvl) ? "category_selected" : ""}
                 onClick={() => toggleLevel(lvl)}
@@ -152,10 +171,19 @@ const AddSkill = () => {
         </div>
 
         <div className="modal_footer">
-          <button className="save_btn" onClick={handleSave} disabled={loading}>
+          <button
+            className="save_btn"
+            onClick={handleSave}
+            disabled={loading}
+          >
             {loading ? "Saving..." : "Save"}
           </button>
-          <button className="cancel_btn" onClick={() => navigate(-1)}>
+
+          <button
+            type="button"
+            className="cancel_btn"
+            onClick={() => navigate(-1)}
+          >
             Cancel
           </button>
         </div>
